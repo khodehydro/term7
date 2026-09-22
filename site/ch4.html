@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۴: هم‌دسته‌ها و لاگرانژ | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۴ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch3.html">→ فصل ۳</a><a href="ch4.html" class="active">فصل ۴</a><a href="ch5.html">فصل ۵ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۴: هم‌دسته‌ها و قضیه لاگرانژ ⚖️</h1><p>قوی‌ترین ابزار برای گروه‌های متناهی: «مرتبه زیرگروه، مرتبه گروه را عاد می‌کند!» — از این یک خط، اویلر و فرما بیرون می‌آید! 🪄</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۴-۱ هم‌دسته‌ها</a><a href="#s2">۴-۲ قضیه لاگرانژ</a><a href="#s3">۴-۳ عکس لاگرانژ؟</a><a href="#s4">۴-۴ اویلر و فرما</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>هم‌دسته یعنی «شیفت دادن» زیرگروه! 🏘️</h4><p>فرض کن زیرگروه \(H\) یک «محله» در شهر \(G\) است. هم‌دسته \(aH\) یعنی کل محله را برداری و به اندازه \(a\) جابه‌جا کنی! قضیه لاگرانژ می‌گوید: شهر دقیقاً به تعدادی محله هم‌اندازه تقسیم می‌شود — پس جمعیت محله، جمعیت شهر را عاد می‌کند! 🏘️🏘️🏘️</p></div>
+
+<h2 id="s1">۴-۱ هم‌دسته‌ها (چپ و راست)</h2>
+<div class="box def"><span class="tag">تعریف ۴-۱ کتاب</span><h4>هم‌دسته چپ و راست</h4>
+<p>اگر \(H\le G\) و \(a\in G\): هم‌دسته <b>چپ</b>: \(aH=\{ah:h\in H\}\) و هم‌دسته <b>راست</b>: \(Ha=\{ha:h\in H\}\). در گروه آبلی (یا نماد جمعی: \(a+H\)) فرقی ندارند. تعداد هم‌دسته‌های متمایز = <b>اندیس</b> \([G:H]\).</p></div>
+<div class="box thm"><span class="tag">قضیه ⭐⭐</span><h4>خواص هم‌دسته‌ها</h4>
+<ol><li>\(aH=bH \iff b^{-1}a\in H \iff a\in bH\). (تست تساوی دو هم‌دسته!)</li>
+<li>دو هم‌دسته یا <b>برابرند</b> یا <b>مجزا</b> — یعنی هم‌دسته‌ها \(G\) را <b>افراز</b> می‌کنند. 🧩</li>
+<li>همه هم‌دسته‌ها <b>هم‌اندازه</b>‌اند: \(|aH|=|H|\).</li>
+<li>\(aH=H \iff a\in H\).</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال ۱ تا ۴ کتاب 📖</span><h4>مثال‌های کتاب: \(S_3\) و \(\mathbb{Z}_6\)</h4>
+<ul><li>کتاب هم‌دسته‌های زیرگروه ۳عضوی در \(S_3\) را حساب می‌کند: ۲ هم‌دسته ۳عضوی که \(S_3\) را افراز می‌کنند ✔.</li>
+<li>در \(\mathbb{Z}_6\) با \(H=\{0,3\}\): هم‌دسته‌ها \(0+H=\{0,3\}\)، \(1+H=\{1,4\}\)، \(2+H=\{2,5\}\) — سه دسته ۲عضوی، افراز کامل! 🧩 اندیس \([G:H]=3\).</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>هم‌دسته‌های چپ ≠ راست! 🪤</h4>
+<div class="qbox"><b>سؤال:</b> در \(S_3\) با \(H=\{e,(1\,2)\}\)، هم‌دسته چپ \((1\,3)H\) و هم‌دسته راست \(H(1\,3)\) را حساب و مقایسه کن.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>چپ: \((1\,3)H=\{(1\,3)e,\ (1\,3)(1\,2)\}=\{(1\,3),\ (1\,2\,3)\}\) ✔.</li>
+<li>راست: \(H(1\,3)=\{e(1\,3),\ (1\,2)(1\,3)\}=\{(1\,3),\ (1\,3\,2)\}\) ✔.</li>
+<li>مقایسه: \((1\,2\,3)\neq(1\,3\,2)\) پس <b>چپ ≠ راست</b>! ⚠️ در گروه غیرآبلی همیشه مساوی نیستند. (این همان انگیزه تعریف «نرمال» در فصل ۶ است! 🌱)</li></ol></details></div>
+
+<h2 id="s2">۴-۲ قضیه لاگرانژ 👑 (ستاره کتاب!)</h2>
+<div class="box thm"><span class="tag">قضیه لاگرانژ 👑</span><h4>اگر \(G\) متناهی و \(H\le G\) آنگاه \(|H|\mid |G|\)</h4>
+<p>دقیق‌تر: \(|G|=[G:H]\cdot|H|\). یعنی: اندازه شهر = تعداد محله‌ها × جمعیت هر محله! 🏘️</p></div>
+<div class="box proof"><span class="tag">اثبات قدم‌به‌قدم</span><h4>اثبات لاگرانژ (فقط ۳ قدم!)</h4>
+<ol class="steps"><li><b>قدم ۱:</b> هم‌دسته‌های چپ متمایز، \(G\) را افراز می‌کنند (از خواص بالا).</li>
+<li><b>قدم ۲:</b> هر هم‌دسته دقیقاً \(|H|\) عضو دارد.</li>
+<li><b>قدم ۳:</b> پس \(|G|=\) (تعداد هم‌دسته‌ها) × \(|H|\)، یعنی \(|G|=[G:H]|H|\) و \(|H|\mid|G|\). ∎ 🎉</li></ol></div>
+<div class="box thm"><span class="tag">نتایج ⭐⭐⭐</span><h4>سه نتیجه مرگبار لاگرانژ!</h4>
+<ol><li>مرتبه هر عنصر، مرتبه گروه را عاد می‌کند: \(o(a)\mid|G|\) — پس \(a^{|G|}=e\) برای همه \(a\)! 💥</li>
+<li>گروه مرتبه <b>اول</b> \(p\)، دوری است (و فقط دو زیرگروه بدیهی دارد). 💥</li>
+<li>اگر \(|G|=n\) و \(a\in G\)، آنگاه \(a^n=e\).</li></ol></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>کار با لاگرانژ</h4>
+<div class="qbox"><b>سؤال:</b> (الف) گروه مرتبه ۱۵ چه زیرگروه‌هایی از نظر مرتبه می‌تواند داشته باشد؟ (ب) ثابت کن گروه مرتبه ۷ دوری است.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) مرتبه زیرگروه باید ۱۵ را عاد کند: \(1,3,5,15\) — فقط همین‌ها! (مثلاً زیرگروه ۷عضوی <b>محال</b> است! 🚫)</li>
+<li>(ب) عضو ناهمانی \(a\) بردار. \(o(a)\mid 7\) و \(o(a)\neq 1\) پس \(o(a)=7\). یعنی \(\langle a\rangle\) هفت عضو دارد = کل گروه → دوری ✔🎉.</li></ol></details></div>
+
+<h2 id="s3">۴-۳ عکس قضیه لاگرانژ؟ 🔄❌</h2>
+<div class="box warn"><span class="tag">⚠️ نکته مهم</span><h4>عکس لاگرانژ در کل غلط است!</h4>
+<p>اگر \(d\mid|G|\)، لزوماً زیرگروه مرتبه \(d\) <b>وجود ندارد</b>! مثال نقض معروف: \(|A_4|=12\) و \(6\mid 12\) ولی \(A_4\) زیرگروه ۶عضوی <b>ندارد</b>! (اثباتش تمرین قشنگ کتاب است: هر زیرگروه ۶عضوی باید همه مربع‌ها را... — در فصل ۶ با نرمال بودن راحت‌تر می‌شود.)</p></div>
+<div class="box tip"><span class="tag">خبر خوب ✅</span><h4>کجاها عکس درست است؟</h4>
+<ul><li>در گروه‌های <b>دوری</b> ✔ (فصل ۲: به‌ازای هر \(d\mid n\) دقیقاً یک زیرگروه مرتبه \(d\)).</li>
+<li>در گروه‌های <b>آبلی متناهی</b> ✔ (نتیجه فصل ۷).</li>
+<li><b>قضیه کوشی:</b> اگر \(p\mid|G|\) اول باشد، عنصر مرتبه \(p\) (پس زیرگروه مرتبه \(p\)) وجود دارد ✔ (اثبات در فصل ۸ با معادله رده‌ای، یا حالت آبلی ساده‌تر).</li></ul></div>
+
+<h2 id="s4">۴-۴ قضیه اویلر و فرمای کوچک 🎩 (جادوی لاگرانژ!)</h2>
+<div class="box thm"><span class="tag">قضیه ⭐⭐⭐</span><h4>اویلر و فرما</h4>
+<p>گروه یکاهای \(\mathbb{Z}_n\): \(U(n)=\{a:(a,n)=1\}\) با ضرب، گروهی آبلی مرتبه \(\varphi(n)\) است.<br>
+<b>قضیه اویلر:</b> اگر \((a,n)=1\) آنگاه \(a^{\varphi(n)}\equiv 1\pmod n\).<br>
+<b>فرمای کوچک:</b> اگر \(p\) اول و \(p\nmid a\) آنگاه \(a^{p-1}\equiv 1\pmod p\) (چون \(\varphi(p)=p-1\)).</p></div>
+<div class="box proof"><span class="tag">اثبات جادویی 🪄</span><h4>اثبات اویلر با لاگرانژ!</h4>
+<ol class="steps"><li>\(U(n)\) گروه مرتبه \(\varphi(n)\) است و \([a]\in U(n)\).</li>
+<li>نتیجه لاگرانژ: \([a]^{|U(n)|}=[1]\) یعنی \([a]^{\varphi(n)}=[1]\).</li>
+<li>یعنی \(a^{\varphi(n)}\equiv 1\pmod n\). ∎ — دیدی؟ یک خط! ✨ فرما هم حالت خاص \(n=p\) است.</li></ol></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>باقیمانده‌های غول‌پیکر 👹</h4>
+<div class="qbox"><b>سؤال:</b> باقیمانده \(7^{100}\) بر ۱۲؟ و \(2^{100}\) بر ۷؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\((7,12)=1\) و \(\varphi(12)=4\). پس \(7^4\equiv 1\). \(7^{100}=(7^4)^{25}\equiv 1^{25}=1\). باقیمانده: <b>۱</b> ✅.</li>
+<li>۷ اول و \((2,7)=1\): فرما: \(2^6\equiv 1\). \(2^{100}=2^{96}\cdot 2^4=(2^6)^{16}\cdot 16\equiv 1\cdot 2=2\pmod 7\) (چون \(16\equiv 2\)). باقیمانده: <b>۲</b> ✅.</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>لاگرانژ</td><td>\(|G|=[G:H]|H|\) ، \(|H|\mid|G|\)</td></tr>
+<tr><td>نتیجه</td><td>\(o(a)\mid|G|\) ، \(a^{|G|}=e\)</td></tr>
+<tr><td>گروه مرتبه اول</td><td>حتماً دوری ✔</td></tr>
+<tr><td>اویلر</td><td>\(a^{\varphi(n)}\equiv 1\) اگر \((a,n)=1\)</td></tr>
+<tr><td>فرما</td><td>\(a^{p-1}\equiv 1\pmod p\)</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>عکس لاگرانژ غلط است! مثال نقض: \(A_4\) و عدد ۶. 🪤</li>
+<li>برای اویلر/فرما حتماً شرط «اول‌نسبت بودن» را چک کن!</li>
+<li>\(\varphi(pq)=(p-1)(q-1)\) اگر \(p,q\) اول متمایز — در تست‌ها زیاد می‌آید.</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> آیا گروه مرتبه ۱۰ می‌تواند عضو مرتبه ۴ داشته باشد؟</div>
+<details class="ans"><summary>پاسخ</summary><p>خیر ❌! چون \(4\nmid 10\) (نتیجه لاگرانژ).</p></details>
+<div class="qbox"><b>۲.</b> باقیمانده \(3^{50}\) بر ۷؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(3^6\equiv 1\)، \(3^{50}=(3^6)^8\cdot 3^2\equiv 9\equiv 2\) ✔.</p></details>
+<div class="qbox"><b>۳.</b> در گروه \(G\) مرتبه ۱۲ با \(H\le G\) و \(|H|=4\)، اندیس \([G:H]\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\([G:H]=12/4=3\) ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch3.html">→ فصل ۳</a><button class="btn btn-ghost done-btn" data-ch="4">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch5.html">فصل ۵: یکریختی ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۴</div><div><a href="ch5.html">بعدی: یکریختی ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

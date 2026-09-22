@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۲: گروه‌های دوری | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۲ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch1.html">→ فصل ۱</a><a href="ch2.html" class="active">فصل ۲</a><a href="ch3.html">فصل ۳ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۲: گروه‌های دوری 🔄</h1><p>ساده‌ترین و قشنگ‌ترین گروه‌ها: کل گروه از «یک نفر» ساخته می‌شود! مثل ساعت که فقط با قدم‌های ۱ساعته همه اعداد را می‌سازد.</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌های این فصل</h4>
+<a href="#s1">۲-۱ زیرگروه‌های دوری و مرتبه</a><a href="#s2">۲-۲ زیرگروه‌های گروه دوری</a><a href="#s3">۲-۳ گروه دایره و ریشه‌های واحد</a><a href="#s4">۲-۴ گروه‌های متناهی‌مولد</a><a href="#sum">خلاصه + نکات امتحانی</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">🎯 اهداف فصل</span><ul><li>تعریف گروه دوری و مرتبه عنصر + قضیه‌های محاسبه مرتبه.</li><li>ساختار کامل زیرگروه‌های گروه دوری و شمارش مولدها با \(\varphi\).</li><li>ریشه‌های واحد و گروه دایره.</li></ul></div>
+<div class="box tip"><span class="tag">👶 شهود</span><h4>دوری یعنی «چرخه»!</h4><p>روی ساعت ⏰ از ۱۲ شروع کن و هر بار ۱ ساعت جلو برو: ۱، ۲، ...، ۱۱، بعد دوباره ۱۲! یک «چرخه» کامل زدی. گروه دوری همین است: از یک عضو (مولد) شروع می‌کنی و با تکرار عمل، <b>همه</b> گروه ساخته می‌شود. 🔄</p></div>
+
+<h2 id="s1">۲-۱ زیرگروه‌های دوری و مرتبه عنصر</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>زیرگروه دوری \(\langle a\rangle\)</h4>
+<p>\(\langle a\rangle=\{a^n : n\in\mathbb{Z}\}=\{\dots,a^{-2},a^{-1},e,a,a^2,\dots\}\). گروه \(G\) <b>دوری</b> است اگر \(G=\langle a\rangle\) برای یک \(a\) (به \(a\) می‌گوییم <b>مولد</b>).<br>
+<b>مرتبه عنصر:</b> کوچک‌ترین \(n\ge 1\) که \(a^n=e\)؛ اگر چنین nای نباشد می‌گوییم مرتبه نامتناهی (\(o(a)=\infty\)). ⚠️ مرتبه عنصر با مرتبه گروه (\(|G|\)) فرق دارد!</p></div>
+<div class="box book-ex"><span class="tag">مثال ۱ و ۲ کتاب 📖</span><h4>ساختن \(\langle 3\rangle\) در \((\mathbb{Z},+)\)</h4>
+<p>کتاب نشان می‌دهد \(\langle 3\rangle = 3\mathbb{Z}=\{\dots,-6,-3,0,3,6,\dots\}\). دقت: در نماد جمعی، \(a^n\) یعنی \(na\)! یعنی «توان» همان «ضرب اسکالر» است. و \(\langle 1\rangle=\mathbb{Z}\) پس \(\mathbb{Z}\) دوری است با مولد ۱ (و البته ۱- هم مولد است!).</p></div>
+<div class="box thm"><span class="tag">قضایای مرتبه ⭐⭐⭐</span><h4>ابزارهای محاسبه مرتبه (حفظ کن!)</h4>
+<ol><li>اگر \(o(a)=n\) آنگاه \(a^k=e \iff n\mid k\).</li>
+<li>اگر \(o(a)=n\) آنگاه \(a^i=a^j \iff n\mid (i-j)\).</li>
+<li>اگر \(o(a)=n\) آنگاه \(o(a^k)=\frac{n}{(n,k)}\) که \((n,k)\) یعنی ب.م.م. ⭐ (مهم‌ترین فرمول فصل!)</li>
+<li>\(|\langle a\rangle| = o(a)\). یعنی مرتبه عنصر = اندازه زیرگروه دوری‌اش.</li></ol></div>
+<div class="box proof"><span class="tag">اثبات قدم‌به‌قدم</span><h4>ایده اثبات \(a^k=e\iff n\mid k\)</h4>
+<ol class="steps"><li>(⟸) اگر \(k=nq\) آنگاه \(a^k=(a^n)^q=e^q=e\) ✔.</li>
+<li>(⟹) تقسیم اقلیدسی: \(k=nq+r\) با \(0\le r&lt;n\). آنگاه \(e=a^k=a^{nq}a^r=ea^r=a^r\). چون \(r&lt;n\) و \(n\) کوچک‌ترین توانِ \(e\)-ساز است، پس \(r=0\) ✔. یعنی \(n\mid k\). ∎</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال ۳ تا ۵ کتاب 📖</span><h4>نکته‌های طلایی کتاب</h4>
+<ul><li>یک گروه دوری می‌تواند <b>چند مولد</b> داشته باشد (مثلاً \(\mathbb{Z}_6=\langle 1\rangle=\langle 5\rangle\)).</li>
+<li>\(\mathbb{Z}\) و \(\mathbb{Z}_n\) دوری‌اند. ولی ⚠️ <b>نه هر گروهی دوری است!</b> مثلاً \((\mathbb{Q},+)\) دوری نیست، \(V_4\) (کلاین) دوری نیست، \(S_3\) دوری نیست.</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>محاسبه مرتبه با فرمول طلایی</h4>
+<div class="qbox"><b>سؤال:</b> در \(\mathbb{Z}_{12}\): (الف) مرتبه ۵؟ (ب) مرتبه ۸؟ (ج) آیا ۵ مولد است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>یادآوری: در \(\mathbb{Z}_{12}\) جمعی، \(o(1)=12\). فرمول: \(o(k)=\frac{12}{(12,k)}\).</li>
+<li>(الف) \((12,5)=1\) پس \(o(5)=\frac{12}{1}=12\) ✅. چون مرتبه‌اش = اندازه گروه، پس <b>مولد است</b>! 🎉</li>
+<li>(ب) \((12,8)=4\) پس \(o(8)=\frac{12}{4}=3\) ✅. چک: \(8+8+8=24\equiv 0\) ✔.</li>
+<li>(ج) بله! هر عنصر با مرتبه ۱۲ مولد است: \(1,5,7,11\) (همان اعداد اول‌نسبت با ۱۲ — تعدادشان \(\varphi(12)=4\)).</li></ol></details></div>
+
+<h2 id="s2">۲-۲ زیرگروه‌های یک گروه دوری 🏗️</h2>
+<div class="box thm"><span class="tag">قضیه اساسی ⭐⭐⭐</span><h4>هر زیرگروه گروه دوری، دوری است!</h4>
+<p>اگر \(G=\langle a\rangle\) دوری باشد، هر زیرگروهش به شکل \(\langle a^d\rangle\) است (برای کوچک‌ترین توان مثبت موجود در زیرگروه). به‌ویژه:</p><ol>
+<li>زیرگروه‌های \(\mathbb{Z}\) دقیقاً \(n\mathbb{Z}\)‌ها هستند. (\(d\mathbb{Z}\)ها)</li>
+<li>اگر \(|G|=n\)، به‌ازای هر مقسوم‌علیه \(d\mid n\) دقیقاً <b>یک</b> زیرگروه مرتبه \(d\) هست: \(\langle a^{n/d}\rangle\).</li>
+<li>تعداد مولدهای گروه دوری مرتبه \(n\): \(\varphi(n)\) (تابع اویلر). ⭐</li>
+<li>\(\langle a^k\rangle = \langle a^{(n,k)}\rangle\) و \(|\langle a^k\rangle|=\frac{n}{(n,k)}\).</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال ۶ کتاب 📖</span><h4>زیرگروه‌های \(\mathbb{Z}_{12}\)</h4>
+<p>مقسوم‌علیه‌های ۱۲: \(1,2,3,4,6,12\) — پس ۶ زیرگروه: مرتبه ۱: \(\langle 0\rangle\)؛ مرتبه ۲: \(\langle 6\rangle=\{0,6\}\)؛ مرتبه ۳: \(\langle 4\rangle=\{0,4,8\}\)؛ مرتبه ۴: \(\langle 3\rangle\)؛ مرتبه ۶: \(\langle 2\rangle\)؛ مرتبه ۱۲: خود \(\mathbb{Z}_{12}\). نمودار شبکه‌ای (Hasse) زیرگروه‌ها را بکش — قشنگ است! 🎨</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>پیدا کردن همه زیرگروه‌ها + مولدها</h4>
+<div class="qbox"><b>سؤال:</b> همه زیرگروه‌های \(\mathbb{Z}_{18}\) را بنویس و مولدهایش را بشمار.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>مقسوم‌علیه‌های ۱۸: \(1,2,3,6,9,18\) → ۶ زیرگروه.</li>
+<li>\(\langle 0\rangle\) (مرتبه۱)، \(\langle 9\rangle\) (مرتبه۲)، \(\langle 6\rangle\) (مرتبه۳)، \(\langle 3\rangle\) (مرتبه۶)، \(\langle 2\rangle\) (مرتبه۹)، \(\langle 1\rangle\) (مرتبه۱۸).</li>
+<li>مولدها: اعداد \(k\) با \((18,k)=1\): \(1,5,7,11,13,17\) → تعداد \(\varphi(18)=\varphi(2)\varphi(9)=1\times 6=6\) ✔.</li></ol></details></div>
+
+<h2 id="s3">۲-۳ گروه دایره و ریشه‌های واحد ⭕</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>گروه دایره \(T\) و \(U_n\)</h4>
+<p>\(T=\{z\in\mathbb{C}:|z|=1\}\) با ضرب، گروه دایره (نامتناهی، آبلی). <b>ریشه‌های \(n\)ام واحد:</b> \(U_n=\{z:z^n=1\}=\{e^{2\pi ik/n}:k=0,\dots,n-1\}\) — یک گروه دوری مرتبه \(n\)! (رأس‌های \(n\)ضلعی منتظم روی دایره واحد! 🔷)</p></div>
+<div class="box book-ex"><span class="tag">مثال ۷ کتاب 📖</span><h4>ریشه‌های واحد</h4>
+<p>کتاب \(U_n\) را معرفی می‌کند: مثلاً \(U_4=\{1,i,-1,-i\}\) (همان مثال فصل ۱! 🎯) و نشان می‌دهد \(U_n=\langle e^{2\pi i/n}\rangle\) دوری است.</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>ریشه‌های ششم واحد</h4>
+<div class="qbox"><b>سؤال:</b> اعضای \(U_6\) را بنویس و مولدهایش را پیدا کن.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(U_6=\{1,\omega,\omega^2,...,\omega^5\}\) که \(\omega=e^{2\pi i/6}=\cos 60°+i\sin 60°=\frac{1}{2}+\frac{\sqrt3}{2}i\).</li>
+<li>مولدها: \(\omega^k\) با \((6,k)=1\) یعنی \(k=1,5\). پس مولدها: \(\omega\) و \(\omega^5=\bar\omega\). تعداد: \(\varphi(6)=2\) ✔.</li>
+<li>غیرمولدها مثل \(\omega^2\) (مرتبه ۳) رأس‌های مثلث متساوی‌الاضلاع‌اند! 🔺</li></ol></details></div>
+
+<h2 id="s4">۲-۴ گروه‌های متناهی‌مولد 🧱</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>متناهی‌مولد</h4>
+<p>\(G=\langle a_1,\dots,a_k\rangle\) یعنی هر عضو \(G\) را می‌توان با \(a_i\)‌ها و معکوس‌هایشان ساخت. اگر با <b>یک</b> عضو ساخته شود دوری است؛ وگرنه فقط «متناهی‌مولد». مثال: \((\mathbb{Z},+)=\langle 1\rangle\) دوری؛ ولی \(\mathbb{Z}\times\mathbb{Z}=\langle(1,0),(0,1)\rangle\) متناهی‌مولدِ غیردوری است.</p></div>
+<div class="box book-ex"><span class="tag">مثال ۸ و ۹ کتاب 📖</span><h4>مثال‌های کتاب</h4>
+<p>کتاب نشان می‌دهد \(\mathbb{Q}\) با جمع حتی متناهی‌مولد هم <b>نیست</b>! (چرا؟ هر مجموعه متناهی از گویاها را در نظر بگیر؛ با مخرج مشترک \(m\)، عدد \(\frac{1}{2m}\) را نمی‌توان ساخت! 🤯) — این تمرین فکری قشنگی است.</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>آیا \(\mathbb{Z}\times\mathbb{Z}\) دوری است؟</h4>
+<div class="qbox"><b>سؤال:</b> ثابت کن \(\mathbb{Z}\times\mathbb{Z}\) با جمع مؤلفه‌ای، دوری نیست.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>فرض خلف: مولد \((a,b)\) دارد. پس \((1,0)=n(a,b)\) و \((0,1)=m(a,b)\) برای \(n,m\) صحیح.</li>
+<li>یعنی \((na,nb)=(1,0)\) و \((ma,mb)=(0,1)\). از اولی \(nb=0\) و از دومی \(ma=0\).</li>
+<li>چون \((a,b)\neq(0,0)\)، یا \(a\neq 0\) (پس \(m=0\) و تناقض با \(mb=1\)) یا \(b\neq 0\) (پس \(n=0\) و تناقض با \(na=1\)). تناقض! پس دوری نیست. ∎ 🎯</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>فرمول</th><th>متن</th></tr>
+<tr><td>\(o(a^k)\)</td><td>\(\frac{n}{(n,k)}\) اگر \(o(a)=n\)</td></tr>
+<tr><td>تعداد مولدها</td><td>\(\varphi(n)\)</td></tr>
+<tr><td>زیرگروه‌های گروه دوری مرتبه n</td><td>به‌ازای هر \(d\mid n\) دقیقاً یکی، مرتبه \(d\)</td></tr>
+<tr><td>\(U_n\)</td><td>دوری مرتبه \(n\)، مولد \(e^{2\pi i/n}\)</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌های امتحانی</span><ul>
+<li>در گروه <b>جمعی</b>، \(a^n\) یعنی \(na\)! مرتبه \(k\) در \(\mathbb{Z}_n\) برابر \(\frac{n}{(n,k)}\) است.</li>
+<li>«دوری» ⟸ هر زیرگروهش دوری است؛ ولی عکسش غلط است! (کلاین: همه زیرگروه‌های سره دوری‌اند ولی خودش دوری نیست! 🪤)</li>
+<li>\(\varphi(p)=p-1\) برای اول \(p\)؛ \(\varphi(p^k)=p^k-p^{k-1}\).</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> در \(\mathbb{Z}_{20}\) مرتبه ۶ و ۷ را بیاب. کدام مولد است؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(o(6)=\frac{20}{2}=10\)، \(o(7)=\frac{20}{1}=20\) پس ۷ مولد است ✔ (و \((20,7)=1\) ✔).</p></details>
+<div class="qbox"><b>۲.</b> گروه دوری مرتبه ۳۰ چند زیرگروه دارد؟ مرتبه‌هایشان؟</div>
+<details class="ans"><summary>پاسخ</summary><p>مقسوم‌علیه‌های ۳۰: \(1,2,3,5,6,10,15,30\) → ۸ زیرگروه با همین مرتبه‌ها ✔.</p></details>
+<div class="qbox"><b>۳.</b> اگر \(o(a)=12\)، مرتبه \(a^8\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(\frac{12}{(12,8)}=\frac{12}{4}=3\) ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch1.html">→ فصل ۱</a><button class="btn btn-ghost done-btn" data-ch="2">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch3.html">فصل ۳: جایگشتی ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۲</div><div><a href="ch3.html">بعدی: گروه‌های جایگشتی ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

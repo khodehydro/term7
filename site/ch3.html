@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۳: گروه‌های جایگشتی | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۳ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch2.html">→ فصل ۲</a><a href="ch3.html" class="active">فصل ۳</a><a href="ch4.html">فصل ۴ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۳: گروه‌های جایگشتی 🔀</h1><p>دنیای «جابه‌جا کردن»! از بر زدن ورق 🃏 تا مکعب روبیک 🧊 — هر زیرگروه از \(S_n\) یک گروه جایگشتی است.</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۳-۱ نمایش دوسطری</a><a href="#s2">۳-۲ نمایش دوری (دورها)</a><a href="#s3">۳-۳ حاصل‌ضرب دورها</a><a href="#s4">۳-۴ تجزیه به دورهای مجزا</a><a href="#s5">۳-۵ زوج/فرد و تقارن‌ها</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">🎯 اهداف</span><ul><li>نمایش دوسطری و دوری، ضرب جایگشت‌ها (راست به چپ!).</li><li>تجزیه یکتا به دورهای مجزا + مرتبه = ک.م.م طول‌ها.</li><li>علامت جایگشت، \(A_n\)، و گروه دووجهی \(D_n\).</li></ul></div>
+<div class="box tip"><span class="tag">👶 شهود</span><h4>بازی صندلی‌ها 🪑</h4><p>۵ نفر دور ۵ صندلی‌اند. سوت می‌زنی و هرکس بلند می‌شود و روی یک صندلی دیگر می‌نشیند، بدون این‌که دو نفر روی یک صندلی باشند — این یک <b>جایگشت</b> است! اگر این جابه‌جایی را «دوتا دوتا» بنویسی (کی کجا رفت) می‌شود <b>نمایش دوسطری</b>، و اگر «حلقه‌های چرخش» را بنویسی می‌شود <b>نمایش دوری</b>. 🔄</p></div>
+
+<h2 id="s1">۳-۱ نمایش دوسطری 📝</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>نمایش دوسطری</h4>
+<p>\(\alpha=\begin{pmatrix}1&2&\cdots&n\\\alpha(1)&\alpha(2)&\cdots&\alpha(n)\end{pmatrix}\): سطر بالا ورودی، سطر پایین خروجی. ضرب \(\alpha\beta\) یعنی اول \(\beta\) بعد \(\alpha\) (از <b>راست به چپ</b>! ➡️⬅️).</p></div>
+<div class="box book-ex"><span class="tag">مثال ۱ کتاب 📖</span><h4>زیرگروه \(G\) از \(S_5\)</h4>
+<p>کتاب یک زیرگروه خاص از \(S_5\) را مثال می‌زند و ضرب اعضایش را با نمایش دوسطری حساب می‌کند — پیام: برای ضرب، ستون‌به‌ستون از راست به چپ دنبال کن! (تمرین من در فصل ۱ دقیقاً همین تکنیک بود.)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>ضرب و معکوس دوسطری</h4>
+<div class="qbox"><b>سؤال:</b> اگر \(\alpha=\begin{pmatrix}1&2&3&4\\3&4&1&2\end{pmatrix}\)، \(\alpha^2\) و \(\alpha^{-1}\) را بیاب.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(\alpha^2=\alpha\alpha\): \(1\to 3\to 1\) ✔ پس \(1\mapsto 1\)؛ \(2\to 4\to 2\) ✔؛ \(3\to 1\to 3\)؛ \(4\to 2\to 4\). پس \(\alpha^2=\) همانی! یعنی \(o(\alpha)=2\). 🎯</li>
+<li>معکوس: سطرها را جابه‌جا کن و مرتب کن: \(\alpha^{-1}=\begin{pmatrix}1&2&3&4\\3&4&1&2\end{pmatrix}=\alpha\)! (چون مرتبه ۲ دارد، خودش معکوس خودش است.) ✔</li></ol></details></div>
+
+<h2 id="s2">۳-۲ نمایش دوری: دورها ⭕</h2>
+<div class="box def"><span class="tag">تعریف ۳-۱ کتاب</span><h4>دور (Cycle)</h4>
+<p>\((a_1\,a_2\,\dots\,a_k)\) یعنی: \(a_1\mapsto a_2\mapsto\cdots\mapsto a_k\mapsto a_1\) و بقیه اعداد <b>ثابت</b> می‌مانند. \(k\) = طول دور. دور طول ۲ = <b>ترانهش (جابه‌جایی)</b>، مثل \((1\,3)\). دور طول ۱ را معمولاً نمی‌نویسیم (چون یعنی «ثابت ماندن»).</p></div>
+<div class="box book-ex"><span class="tag">مثال ۲ و ۳ کتاب 📖</span><h4>خواندن دورها و \(S_3\)</h4>
+<p>کتاب نشان می‌دهد مثلاً \((1\,3\,2)\) یعنی \(1\to 3\to 2\to 1\). و اعضای \(S_3\) در نماد دوری: \(e\) (همانی)، \((1\,2)\)، \((1\,3)\)، \((2\,3)\)، \((1\,2\,3)\)، \((1\,3\,2)\). خیلی تمیزتر از دوسطری! ✨</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>تبدیل دوسطری به دوری</h4>
+<div class="qbox"><b>سؤال:</b> \(\alpha=\begin{pmatrix}1&2&3&4&5\\3&5&4&1&2\end{pmatrix}\) را به‌صورت دوری بنویس.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>از ۱ شروع: \(1\to 3\to 4\to 1\) ✔ چرخه بسته شد: \((1\,3\,4)\).</li>
+<li>کوچک‌ترین عدد استفاده‌نشده: ۲: \(2\to 5\to 2\) ✔ چرخه: \((2\,5)\).</li>
+<li>جواب: \(\alpha=(1\,3\,4)(2\,5)\) ✅. (دورهای مجزا — ترتیب نوشتنشان فرقی ندارد!)</li></ol></details></div>
+
+<h2 id="s3">۳-۳ حاصل‌ضرب دورها ✖️</h2>
+<div class="box thm"><span class="tag">قضیه ⭐</span><h4>دورهای مجزا جابه‌جا می‌شوند</h4>
+<p>اگر دو دور هیچ عضو مشترکی نداشته باشند (مجزا باشند)، آنگاه \(\alpha\beta=\beta\alpha\). ولی ⚠️ دورهای غیرمجزا معمولاً جابه‌جا <b>نمی‌شوند</b>! (این همان دلیل غیرآبلی بودن \(S_n\) برای \(n\ge 3\) است.)</p></div>
+<div class="box book-ex"><span class="tag">مثال ۴ کتاب 📖</span><h4>ضرب دورها</h4>
+<p>کتاب حاصل‌ضرب چند دور را قدم‌به‌قدم حساب می‌کند. تکنیک: از راست‌ترین دور شروع کن و هر عدد را مثل توپ پینگ‌پنگ 🏓 از دوری به دور دیگر پاس بده!</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>پینگ‌پنگ دوری 🏓</h4>
+<div class="qbox"><b>سؤال:</b> حاصل \((1\,2\,3)(1\,2)\) در \(S_3\) چیست؟ (یادآوری: از راست!)</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>عدد ۱: اول \((1\,2)\): \(1\to 2\)، بعد \((1\,2\,3)\): \(2\to 3\). پس \(1\mapsto 3\).</li>
+<li>عدد ۳: \((1\,2)\) ثابت نگهش می‌دارد (\(3\to 3\))، بعد \((1\,2\,3)\): \(3\to 1\). پس \(3\mapsto 1\).</li>
+<li>عدد ۲: \((1\,2)\): \(2\to 1\)، بعد: \(1\to 2\). پس \(2\mapsto 2\) (ثابت!).</li>
+<li>جواب: \((1\,3)\) ✅. امتحان کن: \((1\,2)(1\,2\,3)\) جواب دیگری می‌دهد (\(=(2\,3)\)) — پس جابه‌جا نیستند! 🪤</li></ol></details></div>
+
+<h2 id="s4">۳-۴ تجزیه به دورهای مجزا 🧬 (مهم!)</h2>
+<div class="box thm"><span class="tag">قضیه ⭐⭐⭐</span><h4>تجزیه یکتای جایگشت</h4>
+<p>هر جایگشت را می‌توان به‌صورت حاصل‌ضرب <b>دورهای مجزای</b> یکتا (تا ترتیب) نوشت. نتیجه طلایی: <b>مرتبه جایگشت = ک.م.م طول دورهای مجزایش!</b> 🏆<br>
+مثلاً \(o\big((1\,3\,4)(2\,5)\big)=\mathrm{lcm}(3,2)=6\).</p></div>
+<div class="box proof"><span class="tag">ایده اثبات</span><h4>چرا ک.م.م؟</h4>
+<ol class="steps"><li>دورهای مجزا جابه‌جا می‌شوند، پس \((\alpha_1\cdots\alpha_r)^m=\alpha_1^m\cdots\alpha_r^m\).</li>
+<li>این برابر همانی است ⟺ هر \(\alpha_i^m=e\) ⟺ طول هر دور، \(m\) را عاد کند ⟺ \(m\) مضرب‌مشترک طول‌هاست.</li>
+<li>کوچک‌ترین چنین \(m\) = ک.م.م ✔. ∎</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال ۵ و ۶ کتاب 📖</span><h4>تجزیه و مرتبه</h4>
+<p>کتاب چند جایگشت را تجزیه و مرتبه‌شان را با ک.م.م حساب می‌کند. پیام امتحانی: <b>اول تجزیه به دورهای مجزا، بعد ک.م.م!</b> اگر دورها مجزا نباشند، اول باید ضربشان کنی و بعد تجزیه کنی. ⚠️</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>مرتبه یک جایگشت بزرگ</h4>
+<div class="qbox"><b>سؤال:</b> مرتبه \(\alpha=(1\,2\,3\,4)(5\,6\,7)\) در \(S_7\)؟ و مرتبه \(\beta=(1\,2)(2\,3)\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(\alpha\): دورها مجزا با طول ۴ و ۳ → \(o(\alpha)=\mathrm{lcm}(4,3)=12\) ✅.</li>
+<li>\(\beta\): ⚠️ دورها مجزا <b>نیستند</b> (۲ مشترک است)! اول ضرب: \((1\,2)(2\,3)\): \(1\to 1\to 2\)... حساب کن: \(=(1\,2\,3)\). پس \(o(\beta)=3\) ✅ (نه \(\mathrm{lcm}(2,2)=2\)! 🪤 تله کلاسیک!).</li></ol></details></div>
+
+<h2 id="s5">۳-۵ جایگشت زوج/فرد و تقارن‌ها 🪞</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>ترانهش، علامت، گروه متناوب</h4>
+<p>هر جایگشت را می‌توان به‌صورت حاصل‌ضرب <b>ترانهش‌ها</b> (دورهای طول ۲) نوشت. اگر تعداد ترانهش‌ها زوج باشد، جایگشت <b>زوج</b> است (علامت \(+1\))، وگرنه <b>فرد</b> (علامت \(-1\)). زوج/فرد بودن به نحوه نوشتن بستگی ندارد! (خوش‌تعریف است ✔)<br>
+مجموعه جایگشت‌های زوج = <b>گروه متناوب \(A_n\)</b> با \(|A_n|=n!/2\). <br>میان‌بر ⚡: یک دور طول \(k\) برابر \(k-1\) ترانهش است، پس علامتش \((-1)^{k-1}\).</p></div>
+<div class="box book-ex"><span class="tag">مثال ۷ کتاب 📖</span><h4>تقارن‌های مثلث و مربع (گروه دووجهی!)</h4>
+<p>کتاب تقارن‌های هندسی را بررسی می‌کند: مثلث متساوی‌الاضلاع ۶ تقارن دارد (۳ چرخش + ۳ بازتاب) — این همان \(S_3\) است! در حالت کلی، گروه تقارن‌های \(n\)ضلعی منتظم = <b>گروه دووجهی \(D_n\)</b> با \(2n\) عضو: \(n\) چرخش و \(n\) بازتاب. \(D_n=\langle r,s : r^n=e, s^2=e, srs=r^{-1}\rangle\). 🔷</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>زوج یا فرد؟ + مربع</h4>
+<div class="qbox"><b>سؤال:</b> (الف) علامت \((1\,2\,3\,4)(5\,6)\)؟ (ب) گروه تقارن‌های مربع چند عضو دارد؟ چند چرخش؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) دور طول ۴ = ۳ ترانهش (فرد)، دور طول ۲ = ۱ ترانهش (فرد). مجموع \(3+1=4\) زوج → جایگشت <b>زوج</b> ✅ (عضو \(A_6\) ✔).</li>
+<li>(ب) مربع = ۴ضلعی → \(D_4\) با \(2\times 4=8\) عضو: ۴ چرخش (\(0°,90°,180°,270°\)) + ۴ بازتاب (۲ قطری + ۲ میانی) ✅.</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>ضرب جایگشت</td><td>از <b>راست به چپ</b>!</td></tr>
+<tr><td>مرتبه</td><td>ک.م.م طول دورهای <b>مجزا</b></td></tr>
+<tr><td>دور طول k</td><td>\(=k-1\) ترانهش؛ علامت \((-1)^{k-1}\)</td></tr>
+<tr><td>\(|S_n|\) و \(|A_n|\)</td><td>\(n!\) و \(n!/2\)</td></tr>
+<tr><td>\(|D_n|\)</td><td>\(2n\) (چرخش + بازتاب)</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>ک.م.م فقط وقتی مرتبه است که دورها <b>مجزا</b> باشند! 🪤</li>
+<li>\(S_n\) برای \(n\ge 3\) غیرآبلی است (مثال نقض: \((1\,2)(1\,3)\neq(1\,3)(1\,2)\)).</li>
+<li>در \(D_n\) رابطه طلایی: \(srs=r^{-1}\) (بازتاب، جهت چرخش را برعکس می‌کند!).</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> حاصل \((1\,3\,2)(1\,2\,3)\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>همانی! چون \((1\,3\,2)=(1\,2\,3)^{-1}\) ✔.</p></details>
+<div class="qbox"><b>۲.</b> مرتبه و علامت \((1\,2\,3)(4\,5\,6\,7)\) در \(S_7\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>مجزا با طول ۳ و ۴ → مرتبه \(\mathrm{lcm}(3,4)=12\) ✔. علامت: \((3-1)+(4-1)=5\) فرد → فرد ❌ (عضو \(A_7\) نیست).</p></details>
+<div class="qbox"><b>۳.</b> \(|A_5|\) و \(|D_6|\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(|A_5|=60\)، \(|D_6|=12\) ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch2.html">→ فصل ۲</a><button class="btn btn-ghost done-btn" data-ch="3">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch4.html">فصل ۴: لاگرانژ ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۳</div><div><a href="ch4.html">بعدی: هم‌دسته‌ها و لاگرانژ ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

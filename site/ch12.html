@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۱۲: پیشرفته گروه‌ها | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۱۲ از ۱۲ 🎓</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch11.html">→ فصل ۱۱</a><a href="ch12.html" class="active">فصل ۱۲</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۱۲: پیشرفته‌تر در گروه‌ها 🏔️</h1><p>قله نهایی! این‌جا گروه‌ها را «لایه‌لایه» می‌شکافیم (سری‌ها)، با حل‌پذیرها و پوچ‌توان‌ها آشنا می‌شویم، و گروه‌ها را با «مولد و رابطه» می‌سازیم! 🧗</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۱۲-۱ سری گروه‌ها</a><a href="#s2">۱۲-۲ حل‌پذیرها</a><a href="#s3">۱۲-۳ پوچ‌توان‌ها</a><a href="#s4">۱۲-۴ نمایش آزاد</a><a href="#s5">۱۲-۵ رده‌بندی‌ها</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی + جشن 🎉</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود کل فصل</span><h4>پیاز، نردبان، و دستور آشپزی! 🧅</h4><p>🧅 <b>سری:</b> گروه را مثل پیاز لایه‌لایه پوست می‌کنیم: \(G=G_0\rhd G_1\rhd\cdots\rhd G_n=\{e\}\) — هر لایه نرمال در قبلی!<br>🪜 <b>حل‌پذیر/پوچ‌توان:</b> اگر «پوست‌ها» (خارج‌قسمت‌ها) آبلی باشند → حل‌پذیر؛ اگر لایه‌ها از مرکز بالا بروند → پوچ‌توان!<br>👨‍🍳 <b>نمایش:</b> دستور آشپزی گروه: «مواد لازم (مولدها) + طرز تهیه (رابطه‌ها)»! مثلاً \(D_n=\langle r,s\mid r^n,s^2,srs=r^{-1}\rangle\).</p></div>
+
+<h2 id="s1">۱۲-۱ سری گروه‌ها 🧅</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐</span><h4>سری نرمال، سری ترکیب، عوامل ترکیب</h4>
+<p><b>سری نرمال:</b> \(G=G_0\rhd G_1\rhd\cdots\rhd G_n=\{e\}\) (هر \(G_{i+1}\) نرمال در \(G_i\)). خارج‌قسمت‌های \(G_i/G_{i+1}\) = <b>عوامل</b> سری.<br>
+<b>سری ترکیب:</b> سری نرمالِ «تصفیه‌ناپذیر» (همه عوامل <b>ساده</b> باشند!).<br>
+⭐ <b>قضیه ژردان–هولدر 👑:</b> هر دو سری ترکیب یک گروه، <b>معادل‌اند</b> (همان عوامل ساده تا ترتیب و یکریختی)! — یعنی «آجرهای سازنده» گروه یکتایند! 🧱 (نسخه گروهیِ تجزیه یکتای اعداد! 👯)</p></div>
+<div class="box book-ex"><span class="tag">مثال کتاب 📖</span><h4>سری ترکیب \(S_3\) و \(\mathbb{Z}_{12}\)</h4>
+<ul><li>\(S_3\rhd A_3\rhd\{e\}\): عوامل \(\mathbb{Z}_2\) و \(\mathbb{Z}_3\) (هر دو ساده/اول!) ✔.</li>
+<li>\(\mathbb{Z}_{12}\rhd\langle 2\rangle\rhd\langle 6\rangle\rhd\{e\}\): عوامل \(\mathbb{Z}_2,\mathbb{Z}_3,\mathbb{Z}_2\) — با هر تصفیه دیگری همان عوامل (تا ترتیب) می‌آیند! 🎯</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>سری ترکیب \(S_4\)</h4>
+<div class="qbox"><b>سؤال:</b> یک سری ترکیب برای \(S_4\) بنویس و عواملش را بگو.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(S_4\rhd A_4\rhd V_4\rhd\{e,(12)(34)\}\rhd\{e\}\) — چک نرمال بودن هر لایه در قبلی ✔ (کلاین در \(A_4\) نرمال است ✔).</li>
+<li>عوامل: \(S_4/A_4\cong\mathbb{Z}_2\)، \(A_4/V_4\cong\mathbb{Z}_3\)، \(V_4/\mathbb{Z}_2\cong\mathbb{Z}_2\)، \(\mathbb{Z}_2\) — همه مرتبه اول = ساده! ✔ پس سری ترکیب است 🎉.</li>
+<li>ژردان–هولدر: هر سری ترکیب دیگر \(S_4\) هم دقیقاً عوامل \(\mathbb{Z}_2,\mathbb{Z}_3,\mathbb{Z}_2,\mathbb{Z}_2\) را دارد (تا ترتیب)! 👑</li></ol></details></div>
+
+<h2 id="s2">۱۲-۲ گروه‌های حل‌پذیر 🪜</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐</span><h4>حل‌پذیر + مشتق</h4>
+<p>گروه \(G\) <b>حل‌پذیر</b> است اگر سری نرمالی با <b>عوامل آبلی</b> داشته باشد. معادل: زنجیره مشتق‌ها \(G\rhd G'\rhd G''\rhd\cdots\) به \(\{e\}\) برسد (که \(G'\) = زیرگروه تولیدشده با جابه‌جاگرها \([a,b]=aba^{-1}b^{-1}\)).<br>
+⭐ حقایق: هر گروه آبلی حل‌پذیر است ✔؛ زیرگروه و خارج‌قسمتِ حل‌پذیر، حل‌پذیر است ✔؛ \(S_n\) حل‌پذیر است ⟺ \(n\le 4\) (چون \(A_5\) ساده غیرآبلی است! 💥)؛ هر \(p\)-گروه حل‌پذیر است ✔.</p></div>
+<div class="box tip"><span class="tag">💡 چرا «حل‌پذیر»؟</span><p>به نظریه گالوا (جبر ۲) برمی‌گردد: معادله چندجمله‌ای با فرمول رادیکالی «حل» می‌شود ⟺ گروه گالوایش حل‌پذیر باشد! چون \(S_5\) حل‌پذیر نیست → معادله درجه ۵ فرمول کلی ندارد! 🤯 (قضیه آبل–روفینی — تاریخ‌ساز! 📜)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>حل‌پذیر یا نه؟ 🏁</h4>
+<div class="qbox"><b>سؤال:</b> کدام حل‌پذیرند؟ (الف) \(S_4\) (ب) \(S_5\) (ج) هر گروه مرتبه \(p^2q\).</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) ✔ حل‌پذیر: سری فصل قبل عوامل \(\mathbb{Z}_2,\mathbb{Z}_3,\mathbb{Z}_2,\mathbb{Z}_2\) — همه آبلی! ✅</li>
+<li>(ب) ❌: \(A_5\) ساده غیرآبلی است؛ هر سری ترکیب \(S_5\) شامل \(A_5\) به‌عنوان عامل است که آبلی نیست! (قضیه برنساید \(p^aq^b\) هم می‌گوید گروه مرتبه \(p^aq^b\) حل‌پذیر است ولی \(|S_5|=120=2^3\cdot 3\cdot 5\) سه عامل اول دارد!)</li>
+<li>(ج) ✔: قضیه برنساید (\(p^aq^b\) حل‌پذیر است) — یا مستقیم با سیلو: سیلو نرمال پیدا کن و استقرا بزن! ✅</li></ol></details></div>
+
+<h2 id="s3">۱۲-۳ گروه‌های پوچ‌توان 🌀</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐</span><h4>پوچ‌توان + سری مرکزی بالارونده</h4>
+<p>گروه \(G\) <b>پوچ‌توان</b> است اگر سری مرکزی بالارونده به \(G\) برسد: \(\{e\}=Z_0\lhd Z_1\lhd\cdots\lhd Z_c=G\) که \(Z_{i+1}/Z_i=Z(G/Z_i)\).<br>
+⭐ حقایق طلایی: هر \(p\)-گروه متناهی پوچ‌توان است! 🎯؛ پوچ‌توان ⟹ حل‌پذیر ✔ (عکس غلط: \(S_3\) حل‌پذیر ولی پوچ‌توان نیست!)؛ گروه متناهی پوچ‌توان است ⟺ حاصل‌ضرب مستقیم سیلوهایش است ⟺ هر سیلو نرمال است!</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>پوچ‌توان در عمل</h4>
+<div class="qbox"><b>سؤال:</b> (الف) چرا \(S_3\) پوچ‌توان نیست؟ (ب) گروه آبلی متناهی پوچ‌توان است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) مرکز \(S_3\) بدیهی است (\(Z(S_3)=\{e\}\))! پس سری مرکزی بالا نمی‌رود (\(Z_1=\{e\}\)) و هرگز به \(S_3\) نمی‌رسد ❌. (یا: ۲-سیلوها نرمال نیستند — سه‌تا ۲-سیلو هست!)</li>
+<li>(ب) بله ✔! گروه آبلی: \(Z_1=Z(G)=G\) — در یک قدم تمام! (کلاس پوچ‌توانی ۱ = آبلی 🎯.)</li></ol></details></div>
+
+<h2 id="s4">۱۲-۴ نمایش آزاد گروه‌ها 👨‍🍳 (مولد و رابطه!)</h2>
+<div class="box def"><span class="tag">تعریف ⭐</span><h4>گروه آزاد و نمایش \(\langle S\mid R\rangle\)</h4>
+<p><b>گروه آزاد</b> روی \(S\): همه «کلمه‌ها» با حروف \(S\cup S^{-1}\) (با ساده‌سازی \(xx^{-1}=e\)) — هیچ رابطه‌ای به‌جز بدیهیات گروه!<br>
+<b>نمایش:</b> \(G=\langle S\mid R\rangle\) یعنی \(G\cong F(S)/N\) که \(N\) کوچک‌ترین زیرگروه نرمال شامل رابطه‌های \(R\) است. (دستور آشپزی! 👨‍🍳)<br>
+مثال‌های معروف: \(D_n=\langle r,s\mid r^n,s^2,srsr\rangle\) 🔷؛ \(\mathbb{Z}_n=\langle a\mid a^n\rangle\)؛ \(S_3=\langle r,s\mid r^3,s^2,srsr^{-1}\rangle\).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>خواندن دستور آشپزی 👨‍🍳</h4>
+<div class="qbox"><b>سؤال:</b> گروه \(G=\langle a,b\mid a^2,b^2,abab\rangle\) چند عضو دارد؟ با چه گروهی یکریخت است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>رابطه‌ها: \(a^2=e\)، \(b^2=e\)، و \(abab=e\) یعنی \(ab=(ab)^{-1}=b^{-1}a^{-1}=ba\) (چون هرکدام معکوس خودشان‌اند!) پس \(ab=ba\) — آبلی!</li>
+<li>اعضا: با \(a^2=b^2=e\) و جابه‌جایی، هر کلمه به یکی از \(\{e,a,b,ab\}\) تبدیل می‌شود → حداکثر ۴ عضو.</li>
+<li>هر ۴ متمایزند (چرا؟ به کلاین \(V_4\) نگاشت بده: \(a\mapsto(12)(34)\)... یا: اگر \(a=b\) آنگاه...) → \(G\cong V_4\) (کلاین!) ✅🎉.</li></ol></details></div>
+
+<h2 id="s5">۱۲-۵ برخی رده‌بندی‌ها 🏆 (جمع‌بندی قدرت!)</h2>
+<div class="box thm"><span class="tag">رده‌بندی ⭐⭐⭐</span><h4>تاج افتخار جبر ۱!</h4>
+<table class="tbl"><tr><th>مرتبه</th><th>رده‌بندی (تا یکریختی)</th></tr>
+<tr><td>\(p\) (اول)</td><td>فقط \(\mathbb{Z}_p\) (دوری!) ✔</td></tr>
+<tr><td>\(p^2\)</td><td>فقط \(\mathbb{Z}_{p^2}\) و \(\mathbb{Z}_p\times\mathbb{Z}_p\) (هر دو آبلی!) ✔</td></tr>
+<tr><td>\(pq\) (\(p&lt;q\)، \(p\nmid q-1\))</td><td>فقط \(\mathbb{Z}_{pq}\) (دوری!) ✔</td></tr>
+<tr><td>\(pq\) (\(p\mid q-1\))</td><td>دو گروه: دوری + یک غیردوری (نیم‌مستقیم!) ✔</td></tr>
+<tr><td>\(2p\) (\(p\) فرد)</td><td>\(\mathbb{Z}_{2p}\) یا \(D_p\) (دووجهی!) ✔</td></tr>
+<tr><td>\(p^3\)</td><td>۵ گروه (\(p\) فرد): ۳ آبلی + ۲ غیردوری ✔</td></tr>
+<tr><td>۱۲</td><td>۵ گروه: ۲ آبلی + \(A_4\)، \(D_{12}\)، نیم‌مستقیم دیگر ✔</td></tr></table></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>شکار نهایی! 🏹</h4>
+<div class="qbox"><b>سؤال:</b> همه گروه‌های مرتبه ۶ را رده‌بندی کن.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(6=2\cdot 3\)، \(2\mid(3-1)\) پس دو حالت (ردیف \(pq\) جدول!).</li>
+<li>سیلو: \(n_3=1\) همیشه (چرا؟ \(n_3\mid 2\)، \(n_3\equiv 1(3)\) → فقط ۱ ✔) پس ۳-سیلو \(N\cong\mathbb{Z}_3\) نرمال است.</li>
+<li>\(n_2\in\{1,3\}\): اگر \(n_2=1\): هر دو نرمال → \(\mathbb{Z}_3\times\mathbb{Z}_2\cong\mathbb{Z}_6\) دوری ✅.</li>
+<li>اگر \(n_2=3\): عمل مزدوج‌گیری روی ۳ تا ۲-سیلو → همریختی \(G\to S_3\) که یکریختی است → \(G\cong S_3\) ✅🎉. تمام! (مرتبه ۶: فقط \(\mathbb{Z}_6\) و \(S_3\)!)</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>ژردان–هولدر</td><td>عوامل ترکیب یکتایند (تا ترتیب)! 👑</td></tr>
+<tr><td>حل‌پذیر</td><td>عوامل آبلی؛ \(S_n\iff n\le 4\)؛ \(p\)-گروه‌ها ✔</td></tr>
+<tr><td>پوچ‌توان</td><td>سری مرکزی می‌رسد؛ \(p\)-گروه ✔؛ سیلوها همه نرمال</td></tr>
+<tr><td>نمایش</td><td>\(\langle\)مولدها \(\mid\) رابطه‌ها\(\rangle\) 👨‍🍳</td></tr>
+<tr><td>مرتبه \(p^2\)</td><td>همیشه آبلی! (\(\mathbb{Z}_{p^2}\) یا \(\mathbb{Z}_p^2\))</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>پوچ‌توان ⟹ حل‌پذیر، ولی \(S_3\) حل‌پذیرِ غیرپوچ‌توان است! 🪤</li>
+<li>در سری ترکیب، نرمال بودن هر لایه فقط در <b>قبلی</b> لازم است (نه در کل \(G\))!</li>
+<li>رده‌بندی مرتبه \(pq\) به شرط \(p\mid q-1\) بستگی دارد — همیشه چک کن!</li></ul></div>
+
+<h2 id="quiz">✅ خودآزمایی + 🎓 جشن فارغ‌التحصیلی!</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> عوامل ترکیب \(\mathbb{Z}_{30}\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(\mathbb{Z}_2,\mathbb{Z}_3,\mathbb{Z}_5\) (اول‌های ۳۰!) ✔.</p></details>
+<div class="qbox"><b>۲.</b> آیا \(D_8\) (دووجهی مرتبه ۸) پوچ‌توان است؟</div>
+<details class="ans"><summary>پاسخ</summary><p>بله ✔! ۲-گروه است و هر \(p\)-گروه پوچ‌توان است. (مرکزش \(\{e,r^2\}\) نابدیهی و... ✔.)</p></details>
+<div class="qbox"><b>۳.</b> گروه‌های مرتبه ۱۰؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(10=2\cdot 5\): \(\mathbb{Z}_{10}\) یا \(D_5\) ✔.</p></details></div>
+<div class="box tip" style="text-align:center"><span class="tag">🎉 تبریک!</span><h4>تو کل جبر ۱ را تمام کردی، قهرمان! 🏆</h4>
+<p>از ساعت دیواری ⏰ تا قضایای سیلو 👑، از حلقه‌ها 💍 تا ژردان–هولدر 🧅 — کل ۱۲ فصل کتاب را قدم‌به‌قدم آمدی!<br>قدم بعد؟ مرور خلاصه‌ها، حل تمرین‌های فرد کتاب (پاسخشان آخر کتاب هست!)، و بعد... <b>جبر ۲ و نظریه گالوا!</b> 🚀</p>
+<a class="btn btn-brand" href="index.html">بازگشت به خانه 🏠</a></div>
+
+<div class="pager"><a class="btn btn-ghost" href="ch11.html">→ فصل ۱۱</a><button class="btn btn-ghost done-btn" data-ch="12">✔ این فصل را خواندم</button><a class="btn btn-brand" href="index.html">پایان 🎓</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۱۲ (پایان 🎓)</div><div><a href="index.html">خانه 🏠</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۸: عمل گروه‌ها و سیلو | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۸ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch7.html">→ فصل ۷</a><a href="ch8.html" class="active">فصل ۸</a><a href="ch9.html">فصل ۹ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۸: عمل گروه‌ها و قضایای سیلو 👑</h1><p>جایی که گروه‌ها «دست به کار می‌شوند»! با سیلو می‌توانی گروه‌های مرتبه ۱۲، ۳۰، ۶۰... را کالبدشکافی کنی! 🔬</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۸-۱ عمل گروه</a><a href="#s2">۸-۲ معادله رده‌ای</a><a href="#s3">۸-۳ قضایای سیلو</a><a href="#s4">۸-۴ کاربردها</a><a href="#s5">۸-۵ شمارش مدارها (برنساید)</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>عمل گروه = «بازی کردن» با چیزها! 🎮</h4><p>گروه \(D_4\) (تقارن‌های مربع) روی «رأس‌های مربع» عمل می‌کند: هر تقارن، رأس‌ها را جابه‌جا می‌کند! <b>مدار</b> یک رأس = همه جاهایی که می‌تواند برود. <b>پایدارساز</b> = تقارن‌هایی که آن رأس را سر جایش نگه می‌دارند. قضیه مدار-پایدارساز: (جاهایی که می‌توانی بروی) × (کسانی که نگهت می‌دارند) = کل گروه! ⚖️</p></div>
+
+<h2 id="s1">۸-۱ عمل گروه‌ها</h2>
+<div class="box def"><span class="tag">تعریف ⭐</span><h4>عمل، مدار، پایدارساز</h4>
+<p>عمل \(G\) روی مجموعه \(X\): تابعی \(G\times X\to X\) با \(e\cdot x=x\) و \((gh)\cdot x=g\cdot(h\cdot x)\).<br>
+<b>مدار:</b> \(O_x=\{g\cdot x:g\in G\}\) (همه مقصدهای ممکن). <b>پایدارساز:</b> \(G_x=\{g:g\cdot x=x\}\) (زیرگروه! نگه‌دارنده‌ها).<br>
+⭐ <b>قضیه مدار-پایدارساز:</b> \(|O_x|\cdot|G_x|=|G|\)، یعنی \(|O_x|=[G:G_x]\).</p></div>
+<div class="box book-ex"><span class="tag">عمل‌های کتاب 📖</span><h4>سه عمل حیاتی</h4>
+<ul><li><b>عمل با مزدوج‌گیری:</b> \(g\cdot x=gxg^{-1}\) — مدارها = <b>رده‌های تزویج</b>! (پایه معادله رده‌ای 🧱)</li>
+<li><b>عمل روی هم‌دسته‌ها:</b> \(g\cdot(aH)=(ga)H\) — پایه اثبات سیلو!</li>
+<li><b>عمل انتقالی:</b> فقط یک مدار دارد (از هر نقطه به هر نقطه می‌توان رفت).</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>مدار و پایدارساز در \(D_4\)</h4>
+<div class="qbox"><b>سؤال:</b> \(D_4\) روی رأس‌های مربع \(\{1,2,3,4\}\) عمل می‌کند. مدار و پایدارساز رأس ۱؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>مدار: با چرخش، ۱ به هر ۴ رأس می‌رود → \(O_1=\{1,2,3,4\}\)، \(|O_1|=4\) ✔.</li>
+<li>پایدارساز: تقارن‌های ثابت نگه‌دارنده ۱: همانی + بازتاب نسبت به قطر گذرنده از ۱ → \(|G_1|=2\) ✔.</li>
+<li>تست: \(4\times 2=8=|D_4|\) ✔🎉 (قضیه مدار-پایدارساز!).</li></ol></details></div>
+
+<h2 id="s2">۸-۲ معادله رده‌ای 🧮</h2>
+<div class="box thm"><span class="tag">قضیه ⭐⭐⭐</span><h4>معادله رده‌ای</h4>
+<p>از عمل مزدوج‌گیری: \(|G|=|Z(G)|+\sum[G:C(x)]\) که جمع روی نماینده‌های رده‌های غیربدیهی است و هر جمله \(>1\) و \(|G|\) را عاد می‌کند.<br>
+نتیجه طلایی: <b>هر \(p\)-گروه نابدیهی مرکز نابدیهی دارد!</b> (چون \(p\mid|G|\) و \(p\mid\) هر جمله جمع، پس \(p\mid|Z(G)|\) پس \(|Z(G)|>1\) 🎯). به‌ویژه گروه مرتبه \(p^2\) <b>آبلی</b> است!</p></div>
+<div class="box book-ex"><span class="tag">مثال کتاب 📖</span><h4>رده‌های \(S_3\) و قضیه کوشی</h4>
+<p>کتاب رده‌های تزویج \(S_3\) را حساب می‌کند: \(\{e\}\)، \(\{(12),(13),(23)\}\)، \(\{(123),(132)\}\) — معادله: \(6=1+3+2\) ✔. و با همین ابزار <b>قضیه کوشی</b> را ثابت می‌کند: اگر \(p\mid|G|\) آنگاه عنصر مرتبه \(p\) هست! ✅</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>چرا گروه مرتبه \(p^2\) آبلی است؟</h4>
+<div class="qbox"><b>سؤال:</b> ثابت کن هر گروه مرتبه ۲۵ آبلی است.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(|Z(G)|\) مقسوم‌علیه ۲۵ و \(>1\) (نتیجه بالا) → \(|Z|=5\) یا \(25\).</li>
+<li>اگر \(|Z|=25\) تمام است (آبلی ✔).</li>
+<li>اگر \(|Z|=5\): آنگاه \(|G/Z|=5\) اول → \(G/Z\) دوری → \(G\) آبلی! (قضیه معروف: اگر \(G/Z(G)\) دوری باشد \(G\) آبلی است ✔.) تناقض با \(|Z|=5\)؟ نه — فقط ثابت شد آبلی است و در واقع \(|Z|=25\). ∎ 🎉</li></ol></details></div>
+
+<h2 id="s3">۸-۳ قضایای سیلو 👑👑👑</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>زیرگروه سیلو</h4>
+<p>اگر \(|G|=p^km\) با \((p,m)=1\)، زیرگروه مرتبه \(p^k\) را <b>\(p\)-زیرگروه سیلو</b> می‌نامیم. تعدادشان را \(n_p\) می‌نویسیم.</p></div>
+<div class="box thm"><span class="tag">قضایای سیلو 👑</span><h4>سه قضیه (حفظ کن!)</h4>
+<ol><li><b>وجود:</b> به‌ازای هر \(p\mid|G|\)، \(p\)-زیرگروه سیلو <b>وجود دارد</b>.</li>
+<li><b>مزدوج بودن:</b> همه \(p\)-سیلوها <b>مزدوج‌اند</b> (پس یکریخت!). نتیجه: اگر \(n_p=1\) آنگاه سیلو <b>نرمال</b> است! 🎯</li>
+<li><b>شمارش:</b> \(n_p\equiv 1\pmod p\) و \(n_p\mid m\) (که \(|G|=p^km\)). 🎯</li></ol></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>شکار سیلوها 🔍</h4>
+<div class="qbox"><b>سؤال:</b> گروه \(G\) مرتبه ۱۲: مقادیر ممکن \(n_2\) و \(n_3\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(12=2^2\cdot 3\): \(n_2\mid 3\) و \(n_2\equiv 1\pmod 2\) → \(n_2\in\{1,3\}\) ✔.</li>
+<li>\(12=3\cdot 4\): \(n_3\mid 4\) و \(n_3\equiv 1\pmod 3\) → \(n_3\in\{1,4\}\) ✔.</li>
+<li>اگر \(n_2=1\): ۲-سیلو (مرتبه ۴) نرمال است! اگر \(n_3=1\): ۳-سیلو (مرتبه ۳) نرمال است! (در کاربردها نشان می‌دهیم حداقل یکی همیشه ۱ است... 👀)</li></ol></details></div>
+
+<h2 id="s4">۸-۴ کاربردهای سیلو 🔬</h2>
+<div class="box thm"><span class="tag">کاربرد ⭐⭐⭐</span><h4>گروه مرتبه \(pq\) (\(p&lt;q\) اول، \(p\nmid q-1\)) دوری است!</h4>
+<ol class="steps"><li>\(n_q\mid p\) و \(n_q\equiv 1\pmod q\) → \(n_q=1\) (چون \(p&lt;q\)، گزینه \(p\) با شرط دوم نمی‌خواند... دقیق: \(n_q\in\{1,p\}\) و \(p\not\equiv 1\pmod q\) چون \(p<q\)).</li>
+<li>\(n_p\mid q\) و \(n_p\equiv 1\pmod p\) → \(n_p\in\{1,q\}\)؛ ولی \(q\equiv 1\pmod p\) یعنی \(p\mid q-1\) که خلاف فرض است → \(n_p=1\).</li>
+<li>هر دو سیلو نرمال‌اند (\(n=1\)!) و اشتراکشان بدیهی → \(G\cong\mathbb{Z}_p\times\mathbb{Z}_q\cong\mathbb{Z}_{pq}\) دوری! 🎉</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>عدم سادگی و رده‌بندی</h4>
+<ul><li>کتاب ثابت می‌کند گروه مرتبه ۳۰ <b>ساده نیست</b> (با شمردن اعضا: \(n_5\in\{1,6\}\)، \(n_3\in\{1,10\}\)... اگر هیچ‌کدام ۱ نباشند، شمارش اعضا از ۳۰ می‌زند بیرون! 💥).</li>
+<li>گروه مرتبه ۱۵ دوری است (\(3\nmid 14\) ✔ — همان قضیه \(pq\)!).</li>
+<li>گروه مرتبه \(p^2q\)‌ها، ۱۲، ۲۴... با همین تکنیک «شمارش + نرمال بودن» کالبدشکافی می‌شوند! 🔬</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>گروه مرتبه ۲۱</h4>
+<div class="qbox"><b>سؤال:</b> نشان بده هر گروه مرتبه ۲۱ زیرگروه نرمال مرتبه ۷ دارد.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(21=7\cdot 3\): \(n_7\mid 3\) و \(n_7\equiv 1\pmod 7\) → \(n_7\in\{1,3\}\)؛ ولی \(3\not\equiv 1\pmod 7\) → \(n_7=1\) ✔.</li>
+<li>چون یکتاست، ۷-سیلو (مرتبه ۷) <b>نرمال</b> است 🎉. (و \(n_3\in\{1,7\}\) — هر دو ممکن‌اند؛ گروه غیردوری مرتبه ۲۱ هم هست!)</li></ol></details></div>
+
+<h2 id="s5">۸-۵ شمارش مدارها: لم برنساید 🎨</h2>
+<div class="box thm"><span class="tag">لم برنساید ⭐</span><h4>تعداد مدارها = میانگین نقاط ثابت!</h4>
+<p>اگر \(G\) متناهی روی \(X\) متناهی عمل کند: تعداد مدارها \(=\frac{1}{|G|}\sum_{g\in G}|X^g|\) که \(X^g=\{x:g\cdot x=x\}\) (نقاط ثابت \(g\)).<br>
+کاربرد معروف: <b>شمردن رنگ‌آمیزی‌ها</b> تا تقارن! (مثلاً گردنبند با مهره‌های رنگی 📿).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>گردنبند ۴ مهره‌ای با ۲ رنگ 📿</h4>
+<div class="qbox"><b>سؤال:</b> با مهره‌های سیاه/سفید چند گردنبند ۴تایی متفاوت (تا چرخش) می‌توان ساخت؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>گروه چرخش‌ها \(C_4=\{e,r,r^2,r^3\}\) روی \(2^4=16\) رنگ‌آمیزی عمل می‌کند.</li>
+<li>نقاط ثابت: \(|X^e|=16\)، \(|X^r|=2\) (همه یک‌رنگ)، \(|X^{r^2}|=4\) (روبه‌روها هم‌رنگ: \(2^2\))، \(|X^{r^3}|=2\).</li>
+<li>برنساید: \(\frac{16+2+4+2}{4}=\frac{24}{4}=6\) گردنبند متفاوت! 📿📿📿📿📿📿 (بشمار: ۴سفید، ۳سفید، ۲سفید مجاور، ۲سفید روبه‌رو، ۱سفید، ۰سفید ✔.)</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>مدار-پایدارساز</td><td>\(|O_x|\cdot|G_x|=|G|\)</td></tr>
+<tr><td>معادله رده‌ای</td><td>\(|G|=|Z|+\sum[G:C(x)]\)؛ \(p\)-گروه ⟹ مرکز نابدیهی</td></tr>
+<tr><td>سیلو ۱،۲،۳</td><td>وجود / مزدوج بودن / \(n_p\equiv 1(p)\) و \(n_p\mid m\)</td></tr>
+<tr><td>\(n_p=1\)</td><td>⟹ سیلو نرمال! 🎯</td></tr>
+<tr><td>برنساید</td><td>مدارها = میانگین نقاط ثابت</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>دو شرط \(n_p\) را <b>هر دو</b> با هم اعمال کن (\(n_p\mid m\) <b>و</b> \(n_p\equiv 1\bmod p\))! 🪤</li>
+<li>«گروه مرتبه \(pq\)» فقط وقتی دوری است که \(p\nmid(q-1)\)! (مثلاً مرتبه ۲۱ غیردوری هم دارد!)</li>
+<li>در برنساید، \(X^g\) را برای <b>هر</b> عضو جدا حساب کن (نه فقط مولدها!).</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> گروه مرتبه ۲۸: مقادیر ممکن \(n_7\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(n_7\mid 4\) و \(n_7\equiv 1\pmod 7\) → فقط \(n_7=1\) ✔ (پس ۷-سیلو همیشه نرمال است!).</p></details>
+<div class="qbox"><b>۲.</b> چرا گروه مرتبه ۱۵ دوری است؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(n_5=1\) (چون \(n_5\mid 3\)، \(n_5\equiv 1(5)\)) و \(n_3=1\) (چون \(n_3\mid 5\)، \(n_3\equiv 1(3)\) — گزینه ۵ رد چون \(5\not\equiv 1(3)\)) → هر دو نرمال → \(\mathbb{Z}_3\times\mathbb{Z}_5\cong\mathbb{Z}_{15}\) ✔.</p></details>
+<div class="qbox"><b>۳.</b> تعداد مدارهای عمل مزدوج‌گیری \(S_3\) روی خودش؟</div>
+<details class="ans"><summary>پاسخ</summary><p>۳ مدار (رده‌ها): \(\{e\}\)، ترانهش‌ها، ۳-دورها ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch7.html">→ فصل ۷</a><button class="btn btn-ghost done-btn" data-ch="8">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch9.html">فصل ۹: حلقه‌ها ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۸</div><div><a href="ch9.html">بعدی: حلقه‌ها ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

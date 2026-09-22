@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۹: حلقه‌ها | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۹ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch8.html">→ فصل ۸</a><a href="ch9.html" class="active">فصل ۹</a><a href="ch10.html">فصل ۱۰ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۹: حلقه‌ها 💍</h1><p>تا حالا با «یک عمل» بازی می‌کردیم؛ حالا «جمع و ضرب با هم»! اعداد صحیح، ماتریس‌ها، چندجمله‌ای‌ها — همه حلقه‌اند!</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۹-۱ تعریف و خواص اساسی</a><a href="#s2">۹-۲ ایده‌آل و خارج‌قسمتی</a><a href="#s3">۹-۳ همریختی حلقه</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>حلقه = گروه جمعی + ضربِ مؤدب! 🎩</h4><p>یک حلقه، اول یک گروه آبلی جمعی است (جمع، تفریق، صفر، قرینه — همه سر جایشان ✔). بعد یک «ضرب» هم دارد که شرکت‌پذیر است و روی جمع توزیع می‌شود: \(a(b+c)=ab+ac\). مثل اعداد صحیح: هم جمع داری هم ضرب، و ضرب روی جمع پخش می‌شود! چیزی که لازم <b>نیست</b>: معکوس ضربی و جابه‌جایی ضرب! (اگر باشند، اسم‌های خاص می‌گیریم: 👇)</p></div>
+
+<h2 id="s1">۹-۱ تعریف‌ها و خواص اساسی</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐⭐</span><h4>حلقه + خانواده‌اش</h4>
+<p>مجموعه \(R\) با دو عمل \(+,\cdot\) حلقه است اگر: (۱) \((R,+)\) گروه آبلی؛ (۲) ضرب شرکت‌پذیر؛ (۳) توزیع‌پذیری دوطرفه.<br>
+<b>خانواده:</b> <b>جابه‌جایی</b> (ضرب جابه‌جا)؛ <b>یکدار</b> (عضو واحد \(1\neq 0\) دارد)؛ <b>حوزه صحیح</b> (جابه‌جایی + یکدار + بدون مقسوم‌علیه صفر: \(ab=0\Rightarrow a=0\) یا \(b=0\))؛ <b>میدان</b> (هر ناصفری معکوس ضربی دارد — مثل \(\mathbb{Q},\mathbb{R},\mathbb{C},\mathbb{Z}_p\)).<br>
+⭐ سلسله‌مراتب: میدان ⟹ حوزه صحیح ⟹ حلقه جابه‌جایی یکدار ⟹ حلقه.</p></div>
+<div class="box thm"><span class="tag">خواص پایه</span><h4>قوانین طلایی (اثبات همه با توزیع!)</h4>
+<ol><li>\(a\cdot 0=0\cdot a=0\) (ضرب در صفر = صفر!).</li>
+<li>\((-a)b=a(-b)=-(ab)\) و \((-a)(-b)=ab\) (منفی در منفی = مثبت! بالاخره اثبات شد! 🎉).</li>
+<li>عضو واحد (اگر باشد) یکتاست.</li>
+<li>در حوزه صحیح: قانون حذف ضربی (\(ab=ac,\ a\neq 0\Rightarrow b=c\)).</li>
+<li>⭐ هر <b>حوزه صحیح متناهی</b>، میدان است! (چرا؟ ضرب در \(a\neq 0\) یک‌به‌یک است، پس روی مجموعه متناهی پوشاست، پس \(1\) هم به دست می‌آید! 💥) — نتیجه: \(\mathbb{Z}_p\) میدان است! 🎯</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>باغ‌وحش حلقه‌ها 🦁</h4>
+<table class="tbl"><tr><th>حلقه</th><th>جابه‌جا؟</th><th>یکدار؟</th><th>حوزه صحیح؟</th><th>میدان؟</th></tr>
+<tr><td>\(\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}\)</td><td>✔</td><td>✔</td><td>✔</td><td>به‌جز \(\mathbb{Z}\) ✔</td></tr>
+<tr><td>\(\mathbb{Z}_n\)</td><td>✔</td><td>✔</td><td>⟺ \(n\) اول</td><td>⟺ \(n\) اول</td></tr>
+<tr><td>\(M_2(\mathbb{R})\) ماتریس‌ها</td><td>❌</td><td>✔ (\(I\))</td><td>❌</td><td>❌</td></tr>
+<tr><td>\(R[x]\) چندجمله‌ای‌ها</td><td>⟺ \(R\) جابه‌جا</td><td>✔</td><td>⟺ \(R\) حوزه صحیح</td><td>❌ (\(x\) معکوس ندارد!)</td></tr>
+<tr><td>\(2\mathbb{Z}\) (زوج‌ها)</td><td>✔</td><td>❌ (۱ ندارد!)</td><td>❌ (یکدار نیست)</td><td>❌</td></tr></table></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>مقسوم‌علیه صفر در \(\mathbb{Z}_{12}\) 🔍</h4>
+<div class="qbox"><b>سؤال:</b> (الف) در \(\mathbb{Z}_{12}\) دو مقسوم‌علیه صفر ناصفر بیاب. (ب) آیا \(\mathbb{Z}_{12}\) حوزه صحیح/میدان است؟ (ج) مشخصه \(\mathbb{Z}_{12}\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) \(3\times 4=12\equiv 0\) ولی \(3,4\neq 0\)! پس ۳ و ۴ مقسوم‌علیه صفرند 💥 (همچنین \(2\times 6=0\)).</li>
+<li>(ب) چون مقسوم‌علیه صفر دارد: نه حوزه صحیح ❌ نه میدان ❌.</li>
+<li>(ج) <b>مشخصه</b> = کوچک‌ترین \(n>0\) که \(n\cdot 1=0\): \(12\cdot 1=0\) و کوچک‌ترش نه → مشخصه ۱۲ ✔. (مشخصه \(\mathbb{Z},\mathbb{Q},\mathbb{R}\) صفر است چون هیچ‌وقت به صفر نمی‌رسی!)</li></ol></details></div>
+
+<h2 id="s2">۹-۲ ایده‌آل‌ها و حلقه خارج‌قسمتی 🧩</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐⭐</span><h4>ایده‌آل (نسخه حلقه‌ایِ «نرمال»!)</h4>
+<p>زیرگروه جمعی \(I\subseteq R\) <b>ایده‌آل</b> است اگر «ضرب بیرونی را جذب کند»: \(r\in R,\ a\in I\Rightarrow ra,ar\in I\) (مثل اسفنج! 🧽).<br>
+اگر \(I\) ایده‌آل باشد، \(R/I\) با جمع و ضرب هم‌دسته‌ها حلقه می‌شود: <b>حلقه خارج‌قسمتی</b>.<br>
+انواع خاص: <b>ایده‌آل اصلی</b> \((a)=Ra\)؛ <b>اول</b> (\(ab\in P\Rightarrow a\in P\) یا \(b\in P\) ⟺ \(R/P\) حوزه صحیح)؛ <b>ماکسیمال</b> (\(R/M\) میدان!). ⭐</p></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>ایده‌آل‌های \(\mathbb{Z}\) و تست‌ها</h4>
+<ul><li>ایده‌آل‌های \(\mathbb{Z}\) دقیقاً \(n\mathbb{Z}\)‌ها هستند (چون زیرگروه‌های جمعی همین‌اند و جذب ضرب خودکار است!).</li>
+<li>\(n\mathbb{Z}\) اول است ⟺ \(n\) اول ⟺ \(\mathbb{Z}/n\mathbb{Z}\cong\mathbb{Z}_n\) حوزه صحیح ⟺ میدان — همه‌چیز به هم وصل است! 🔗✨</li>
+<li>کتاب: در حلقه جابه‌جایی یکدار، \(M\) ماکسیمال ⟺ \(R/M\) میدان؛ \(P\) اول ⟺ \(R/P\) حوزه صحیح. (دو قضیه خیلی مهم! ⭐⭐)</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>ایده‌آل هست یا نه؟ + خارج‌قسمت</h4>
+<div class="qbox"><b>سؤال:</b> (الف) آیا \(3\mathbb{Z}\) ایده‌آل \(\mathbb{Z}\) است؟ اول؟ ماکسیمال؟ (ب) حلقه \(\mathbb{Z}[x]/(x)\) با چه حلقه‌ای یکریخت است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) ایده‌آل ✔. اول؟ \(3\) اول است ✔. ماکسیمال؟ \(\mathbb{Z}/3\mathbb{Z}\cong\mathbb{Z}_3\) میدان است ✔ پس ماکسیمال هم هست! (در \(\mathbb{Z}\): اولِ ناصفر = ماکسیمال 🎯.)</li>
+<li>(ب) خارج‌قسمت بر \((x)\) یعنی «\(x=0\) بگذار»! پس \(\mathbb{Z}[x]/(x)\cong\mathbb{Z}\) ✅ (جایگذاری \(x=0\): همریختی ارزیابی با هسته \((x)\) — پیش‌نمایش قضیه اول! 👀).</li></ol></details></div>
+
+<h2 id="s3">۹-۳ همریختی‌های حلقه 📨</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>همریختی حلقه + قضیه اول</h4>
+<p>\(\varphi:R\to S\) با \(\varphi(a+b)=\varphi(a)+\varphi(b)\) و \(\varphi(ab)=\varphi(a)\varphi(b)\) (معمولاً هم \(\varphi(1)=1\)) = همریختی حلقه.<br>
+⭐ \(\ker\varphi\) همیشه <b>ایده‌آل</b> است! و <b>قضیه اول یکریختی حلقه‌ها:</b> \(R/\ker\varphi\cong\mathrm{im}\,\varphi\). (دقیقاً مثل گروه‌ها! 👯)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>همریختی ارزیابی 🧪</h4>
+<div class="qbox"><b>سؤال:</b> \(\varphi:\mathbb{R}[x]\to\mathbb{C}\) با \(\varphi(f)=f(i)\) (جایگذاری \(x=i\)). هسته؟ و \(\mathbb{R}[x]/\ker\varphi\cong؟\)</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>همریختی ✔ (جایگذاری، جمع و ضرب را حفظ می‌کند) و پوشا ✔ (هر \(a+bi\) تصویر \(a+bx\) است).</li>
+<li>هسته: چندجمله‌ای‌های حقیقی که \(i\) ریشه آن‌هاست = مضرب‌های مینیمالِ \(i\) یعنی \((x^2+1)\) ✔.</li>
+<li>قضیه اول: \(\mathbb{R}[x]/(x^2+1)\cong\mathbb{C}\) ✅🎉 — اعداد مختلط = چندجمله‌ای‌ها «به پیمانه \(x^2+1\)»! (یعنی با قانون \(x^2=-1\)، همان \(i^2=-1\)! 🤯)</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>سلسله‌مراتب</td><td>میدان ⟹ حوزه صحیح ⟹ جابه‌جایی یکدار ⟹ حلقه</td></tr>
+<tr><td>حوزه صحیح متناهی</td><td>حتماً میدان! (\(\mathbb{Z}_p\) میدان)</td></tr>
+<tr><td>ایده‌آل</td><td>زیرگروه جمعی + جذب ضرب 🧽</td></tr>
+<tr><td>\(P\) اول / \(M\) ماکسیمال</td><td>\(R/P\) حوزه صحیح / \(R/M\) میدان</td></tr>
+<tr><td>قضیه اول</td><td>\(R/\ker\varphi\cong\mathrm{im}\,\varphi\)</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>\(\mathbb{Z}_n\) میدان است ⟺ \(n\) اول! 🪤 (مثلاً \(\mathbb{Z}_4\) میدان نیست!)</li>
+<li>هر زیرحلقه، ایده‌آل نیست! (مثلاً \(\mathbb{Z}\) زیرحلقه \(\mathbb{Q}\) است ولی ایده‌آل نیست: \(\frac{1}{2}\cdot 1\notin\mathbb{Z}\) 🪤.)</li>
+<li>در حلقه یکدار، ایده‌آل سره نمی‌تواند شامل «یکا» (عضو وارون‌پذیر) باشد!</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> آیا \(\mathbb{Z}_9\) حوزه صحیح است؟ چرا؟</div>
+<details class="ans"><summary>پاسخ</summary><p>خیر ❌: \(3\times 3=9\equiv 0\) — مقسوم‌علیه صفر دارد! (۹ اول نیست.)</p></details>
+<div class="qbox"><b>۲.</b> آیا \((x)\) در \(\mathbb{R}[x]\) اول است؟ ماکسیمال؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(\mathbb{R}[x]/(x)\cong\mathbb{R}\) میدان است → هم اول ✔ هم ماکسیمال ✔.</p></details>
+<div class="qbox"><b>۳.</b> هسته همریختی \(\varphi:\mathbb{Z}\to\mathbb{Z}_n\) (تصویر طبیعی)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(n\mathbb{Z}\) ✔ و قضیه اول: \(\mathbb{Z}/n\mathbb{Z}\cong\mathbb{Z}_n\) ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch8.html">→ فصل ۸</a><button class="btn btn-ghost done-btn" data-ch="9">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch10.html">فصل ۱۰: تجزیه ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۹</div><div><a href="ch10.html">بعدی: تجزیه در حلقه‌ها ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

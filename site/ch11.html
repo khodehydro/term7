@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۱۱: پیشرفته حلقه‌ها | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۱۱ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch10.html">→ فصل ۱۰</a><a href="ch11.html" class="active">فصل ۱۱</a><a href="ch12.html">فصل ۱۲ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۱۱: پیشرفته‌تر در حلقه‌ها 🔬</h1><p>میکروسکوپ جبر! 🔍 با «موضعی‌سازی» روی یک نقطه زوم می‌کنیم، با «رادیکال» ناخالصی‌ها را می‌یابیم، و با «مدول» وارد دنیای جدید می‌شویم!</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۱۱-۱ مجموعه بسته ضربی</a><a href="#s2">۱۱-۲ حلقه کسرها (موضعی‌سازی)</a><a href="#s3">۱۱-۳ رادیکال‌ها</a><a href="#s4">۱۱-۴ مدول‌ها</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود کل فصل</span><h4>میکروسکوپ، ناخالصی، و فضای برداریِ تعمیم‌یافته!</h4><p>🔍 <b>موضعی‌سازی:</b> مثل زوم کردن نقشه روی محله خودت — فقط رفتار حلقه «نزدیک یک ایده‌آل اول» را می‌بینی!<br>🧪 <b>رادیکال:</b> مثل آزمایش ناخالصی آب — عناصری که «توانی‌شان» در ایده‌آل می‌افتد!<br>📦 <b>مدول:</b> مثل فضای برداری، ولی به‌جای میدان، روی یک حلقه! (گروه آبلی = مدول روی \(\mathbb{Z}\)! 🤯)</p></div>
+
+<h2 id="s1">۱۱-۱ مجموعه‌های بسته ضربی ✖️</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>مجموعه بسته ضربی \(S\)</h4>
+<p>زیرمجموعه \(S\subseteq R\) با: \(1\in S\)، \(0\notin S\)، و \(s,t\in S\Rightarrow st\in S\). (قرار است این‌ها «مخرج» شوند، پس صفر نباید باشد و باید تحت ضرب بسته باشند!)<br>
+مثال‌های طلایی: (۱) \(S=R\setminus P\) که \(P\) ایده‌آل اول است (متمم یک اول!) ✔؛ (۲) \(\{1,f,f^2,\dots\}\) (توان‌های یک عنصر) ✔؛ (۳) مجموعه نامقسوم‌علیه‌های صفر ✔.</p></div>
+<div class="box book-ex"><span class="tag">مثال کتاب 📖</span><h4>چرا متمم اول، بسته ضربی است؟</h4>
+<p>کتاب ثابت می‌کند: \(R\setminus P\) بسته ضربی است ⟺ \(P\) اول است! (چرا؟ \(st\notin P\iff s\notin P\) یا... — دقیقاً تعریف اول بودن: \(st\in P\Rightarrow s\in P\) یا \(t\in P\)! 🔗 زیباست، نه؟)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>بسته ضربی هست؟</h4>
+<div class="qbox"><b>سؤال:</b> در \(\mathbb{Z}\): (الف) اعداد فرد (ب) \(\{1,2,4,8,\dots\}\) (ج) اعداد مثبت — کدام بسته ضربی‌اند؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) ✔: \(1\) فرد است، \(0\) زوج است (پس بیرون ✔)، فرد×فرد=فرد ✔. (این \(= \mathbb{Z}\setminus 2\mathbb{Z}\)، متمم اول \((2)\)! 🎯)</li>
+<li>(ب) ✔: توان‌های ۲: \(1=2^0\) هست، صفر نیست، \(2^a2^b=2^{a+b}\) ✔.</li>
+<li>(ج) ✔: \(1>0\)، \(0\) مثبت نیست، مثبت×مثبت=مثبت ✔. (ولی متمم یک اول نیست — اول‌ها در \(\mathbb{Z}\) به شکل \(p\mathbb{Z}\)‌اند!)</li></ol></details></div>
+
+<h2 id="s2">۱۱-۲ حلقه کسرها: موضعی‌سازی 🔍 \(S^{-1}R\)</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐⭐</span><h4>موضعی‌سازی \(S^{-1}R\)</h4>
+<p>کسرهای \(\frac{r}{s}\) با \(r\in R\)، \(s\in S\) و قانون \(\frac{r}{s}=\frac{r'}{s'}\iff \exists t\in S:\ t(rs'-r's)=0\). (اگر \(R\) حوزه صحیح: همان \(rs'=r's\) ساده! ✔)<br>
+⭐ حالت‌های معروف: \(S=R\setminus P\) → حلقه موضعی \(R_P\) (فقط <b>یک</b> ایده‌آل ماکسیمال دارد! 🎯)؛ \(S=R\setminus\{0\}\) در حوزه صحیح → میدان کسرها (فصل ۱۰!).<br>
+<b>شهود:</b> اعضای \(S\) را «وارون‌پذیر» می‌کنیم (زورکی یکا می‌شوند! 💪) — یعنی از دید \(S\) به حلقه نگاه می‌کنیم.</p></div>
+<div class="box thm"><span class="tag">قضیه ⭐</span><h4>\(R_P\) حلقه موضعی است!</h4>
+<p>ایده‌آل‌های \(R_P\) دقیقاً با ایده‌آل‌های اولِ داخل \(P\) نظیرند، و \(PR_P\) تنها ایده‌آل ماکسیمالش است. مثال: \(\mathbb{Z}_{(2)}=\{\frac{a}{b}:b\ \text{فرد}\}\) — گویاهایی با مخرج فرد! تنها ماکسیمالش \(= 2\mathbb{Z}_{(2)}\) (کسرهای با صورت زوج). 🔍</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>بازی در \(\mathbb{Z}_{(2)}\)</h4>
+<div class="qbox"><b>سؤال:</b> در \(\mathbb{Z}_{(2)}\): (الف) آیا \(\frac{3}{5}\) یکاست؟ \(\frac{6}{5}\)؟ (ب) \(\frac{2}{3}+\frac{4}{7}\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) یکاها = کسرهایی که صورتشان هم فرد (در \(S\)) باشد! \(\frac{3}{5}\): صورت فرد → یکا ✔ (معکوسش \(\frac{5}{3}\) ✔). \(\frac{6}{5}\): صورت زوج → یکا نیست ❌ (در ماکسیمال است!).</li>
+<li>(ب) \(\frac{2}{3}+\frac{4}{7}=\frac{14+12}{21}=\frac{26}{21}\) ✔ (مخرج \(21\) فرد ✔ پس در حلقه است!).</li></ol></details></div>
+
+<h2 id="s3">۱۱-۳ رادیکال‌ها 🧪</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐</span><h4>رادیکال، نیل‌رادیکال، جیکوبسون</h4>
+<p><b>رادیکال ایده‌آل \(I\):</b> \(\sqrt{I}=\{r:\exists n,\ r^n\in I\}\) — «کسانی که توانی‌شان در \(I\) می‌افتد»!<br>
+<b>نیل‌رادیکال:</b> \(\sqrt{(0)}\) = عناصر نیل‌پوتن (\(r^n=0\)) = اشتراک همه ایده‌آل‌های اول! 🧪<br>
+<b>رادیکال جیکوبسون \(J(R)\):</b> اشتراک همه ایده‌آل‌های ماکسیمال. در حلقه موضعی = همان تک‌ماکسیمال!</p></div>
+<div class="box thm"><span class="tag">قضیه</span><h4>\(\sqrt{I}\) ایده‌آل است و...</h4>
+<p>کتاب ثابت می‌کند \(\sqrt{I}\) ایده‌آل است (نکته اثبات: \((a+b)^{m+n}\) را با بسط دوجمله‌ای باز کن — هر جمله یا \(a\)ی کافی یا \(b\)ی کافی دارد! 🧮). و: \(\sqrt{I}\) اول است ⟺ ... (ارتباط با هندسه جبری: رادیکال = «همان مکان هندسی»! 🗺️).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>رادیکال در عمل</h4>
+<div class="qbox"><b>سؤال:</b> (الف) رادیکال \((12)\) در \(\mathbb{Z}\)؟ (ب) نیل‌رادیکال \(\mathbb{Z}_{12}\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) \(r^n\in(12)\) یعنی \(12\mid r^n\) یعنی \(2,3\mid r\) (چرا؟ اگر \(p\mid r^n\) آنگاه \(p\mid r\) ✔) یعنی \(6\mid r\). پس \(\sqrt{(12)}=(6)=(2)\cap(3)\) ✅. (قانون: رادیکال \((n)\) = حاصل‌ضرب اول‌های متمایز \(n\)! 🎯)</li>
+<li>(ب) نیل‌پوتن‌های \(\mathbb{Z}_{12}\): \(6^2=36\equiv 0\) ✔ پس \(6\) نیل‌پوتن! \(r\) نیل‌پوتن ⟺ \(2,3\mid r\) (در \(\mathbb{Z}\)) ⟺ \(r\in\{0,6\}\). پس نیل‌رادیکال \(=\{0,6\}\) ✅. (اشتراک اول‌ها: \((2)\cap(3)=(6)=\{0,6\}\) ✔🎉.)</li></ol></details></div>
+
+<h2 id="s4">۱۱-۴ مدول‌ها 📦 (دنیای جدید!)</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐⭐</span><h4>مدول روی حلقه \(R\)</h4>
+<p>گروه آبلی \((M,+)\) با «ضرب اسکالر» \(R\times M\to M\) که: \(r(m+n)=rm+rn\)، \((r+s)m=rm+sm\)، \((rs)m=r(sm)\)، \(1m=m\).<br>
+<b>شهود:</b> فضای برداری که اسکالرهایش از یک حلقه می‌آیند (نه لزوماً میدان)!<br>
+مثال‌های طلایی: (۱) هر فضای برداری = مدول روی میدان ✔؛ (۲) هر گروه آبلی = مدول روی \(\mathbb{Z}\)! (\(n\cdot m=m+\cdots+m\) 🤯)؛ (۳) هر حلقه = مدول روی خودش؛ (۴) هر ایده‌آل = زیرمدول! ✔</p></div>
+<div class="box def"><span class="tag">تعریف</span><h4>نوتری و آرتینی ⛓️</h4>
+<p><b>نوتری:</b> زنجیره صعودی زیرمدول‌ها پایدار می‌شود (\(M_1\subseteq M_2\subseteq\cdots\) ⟹ از جایی به بعد ثابت!) ⟺ هر زیرمدول متناهی‌مولد است.<br>
+<b>آرتینی:</b> زنجیره نزولی پایدار می‌شود.<br>
+⭐ <b>قضیه مهم کتاب:</b> هر حلقه <b>آرتینی</b>، <b>نوتری</b> است! (عکسش غلط است: \(\mathbb{Z}\) نوتری ولی آرتینی نیست — زنجیره \((2)\supset(4)\supset(8)\supset\cdots\) تمام نمی‌شود! ⛓️).</p></div>
+<div class="box book-ex"><span class="tag">نتیجه کتاب 📖</span><h4>قضیه پایه هیلبرت 🏛️</h4>
+<p>اگر \(R\) نوتری باشد، \(R[x]\) هم نوتری است! پس \(\mathbb{Z}[x]\)، \(F[x,y]\)، ... همه نوتری‌اند 🎉. (ایده: ضرایب پیشروها یک ایده‌آل صعودی در \(R\) می‌سازند که چون \(R\) نوتری است پایدار می‌شود، و از آن‌جا مولدهای متناهی برای ایده‌آل \(R[x]\) می‌سازی!)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>مدول‌ها همه‌جا هستند! 🌍</h4>
+<div class="qbox"><b>سؤال:</b> (الف) نشان بده \(\mathbb{Z}_6\) یک \(\mathbb{Z}\)-مدول است. (ب) آیا \(\mathbb{Q}\) به‌عنوان \(\mathbb{Z}\)-مدول متناهی‌مولد است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) هر گروه آبلی \(\mathbb{Z}\)-مدول است: \(n\cdot\bar a=\overline{na}\) ✔. (خوش‌تعریفی: چون \(6\mid 6k\) ✔.)</li>
+<li>(ب) خیر ❌! (همان استدلال فصل ۲: هر مجموعه متناهی \(\{\frac{a_i}{b_i}\}\) را با مخرج مشترک \(m\) بگیری، \(\frac{1}{2m}\) ساخته نمی‌شود!) پس \(\mathbb{Q}\) مدولِ غیرمتناهی‌مولد است — ولی چون زیرمدول‌هایش... (زیرگروه‌های \(\mathbb{Q}\) همه... نه! \(\mathbb{Q}\) حتی نوتری هم نیست! 🤯).</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>بسته ضربی</td><td>\(1\in S\)، \(0\notin S\)، ضرب‌بسته؛ \(R\setminus P\) ⟺ \(P\) اول</td></tr>
+<tr><td>\(R_P\)</td><td>حلقه موضعی با تک‌ماکسیمال \(PR_P\) 🔍</td></tr>
+<tr><td>رادیکال</td><td>\(\sqrt{I}=\{r:r^n\in I\}\)؛ نیل‌رادیکال = اشتراک اول‌ها</td></tr>
+<tr><td>مدول</td><td>فضای برداری روی حلقه؛ گروه آبلی = \(\mathbb{Z}\)-مدول</td></tr>
+<tr><td>آرتینی ⟹ نوتری</td><td>همیشه! ولی عکس غلط (\(\mathbb{Z}\)) ⛓️</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>در \(S^{-1}R\) تساوی کسرها با «\(t\) اضافی» است (اگر حوزه صحیح نیست، \(t\) را فراموش نکن! 🪤).</li>
+<li>یکاهای \(R_P\) = کسرهایی با صورتِ بیرونِ \(P\)!</li>
+<li>هر حلقه آرتینی نوتری است ولی هر حلقه نوتری آرتینی نیست!</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> تک‌ماکسیمال \(\mathbb{Z}_{(3)}\)؟ آیا \(\frac{4}{9}\) در آن است؟</div>
+<details class="ans"><summary>پاسخ</summary><p>ماکسیمال \(=3\mathbb{Z}_{(3)}\) (صورت مضرب ۳) ✔. \(\frac{4}{9}\): مخرج \(9=3^2\) مضرب ۳ است پس در \(S\) نیست → در حلقه نیست ❌! (مخرج باید با ۳ اول‌نسبت باشد!)</p></details>
+<div class="qbox"><b>۲.</b> رادیکال \((18)\) در \(\mathbb{Z}\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(18=2\cdot 3^2\) → اول‌های متمایز: ۲ و ۳ → \(\sqrt{(18)}=(6)\) ✔.</p></details>
+<div class="qbox"><b>۳.</b> چرا \(\mathbb{Z}\) آرتینی نیست؟</div>
+<details class="ans"><summary>پاسخ</summary><p>زنجیره نزولی \((2)\supsetneq(4)\supsetneq(8)\supsetneq\cdots\) هرگز پایدار نمی‌شود ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch10.html">→ فصل ۱۰</a><button class="btn btn-ghost done-btn" data-ch="11">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch12.html">فصل ۱۲: پیشرفته گروه ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۱۱</div><div><a href="ch12.html">بعدی: پیشرفته‌تر در گروه‌ها ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

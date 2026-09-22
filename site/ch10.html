@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۱۰: تجزیه در حلقه‌ها | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۱۰ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch9.html">→ فصل ۹</a><a href="ch10.html" class="active">فصل ۱۰</a><a href="ch11.html">فصل ۱۱ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۱۰: تجزیه در حلقه‌ها 🧬</h1><p>قضیه اساسی حساب (\(n\) = حاصل‌ضرب اول‌ها) در کدام حلقه‌ها زنده می‌ماند؟ سفر از \(\mathbb{Z}\) به چندجمله‌ای‌ها! 🗺️</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۱۰-۱ حلقه چندجمله‌ای‌ها</a><a href="#s2">۱۰-۲ حوزه‌های اقلیدسی</a><a href="#s3">۱۰-۳ میدان کسرها</a><a href="#s4">۱۰-۴ حوزه تجزیه یکتا</a><a href="#s5">۱۰-۵ آزمون‌های تحویل‌ناپذیری</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>لگوهای اول! 🧱</h4><p>عدد ۱۲ فقط یک‌جور به «آجرهای اول» تجزیه می‌شود: \(2^2\times 3\). سؤال فصل: در حلقه‌های دیگر (مثل چندجمله‌ای‌ها) هم چنین چیزی هست؟ جواب: گاهی بله (UFD ✅) گاهی نه ❌! و ابزار تشخیص «آجر بودن» (تحویل‌ناپذیری) چندجمله‌ای‌ها، آزمون‌های قشنگی مثل <b>آیزنشتاین</b> است! ✨</p></div>
+
+<h2 id="s1">۱۰-۱ حلقه چندجمله‌ای‌ها \(F[x]\) 📊</h2>
+<div class="box thm"><span class="tag">قضیه ⭐⭐⭐</span><h4>الگوریتم تقسیم + ریشه‌ها</h4>
+<p>اگر \(F\) میدان باشد، در \(F[x]\) تقسیم با باقی‌مانده هست: \(f=gq+r\) با \(\deg r<\deg g\).<br>
+<b>قضیه ریشه:</b> \(a\) ریشه \(f\) است ⟺ \((x-a)\mid f\). <b>قضیه تعداد ریشه:</b> چندجمله‌ای ناصفر درجه \(n\) روی میدان، حداکثر \(n\) ریشه دارد!<br>
+⭐ \(F[x]\) حوزه اقلیدسی (با درجه) و در نتیجه PID و UFD است!</p></div>
+<div class="box book-ex"><span class="tag">مثال کتاب 📖</span><h4>تقسیم چندجمله‌ای</h4>
+<p>کتاب تقسیم \(x^3+2x+1\) بر \(x+1\) و یافتن ریشه‌ها را قدم‌به‌قدم انجام می‌دهد. پیام: همیشه اول دنبال ریشه گویا/صحیح بگرد (کاندیداها: مقسوم‌علیه‌های جمله ثابت تقسیم بر مقسوم‌علیه‌های ضریب پیشرو!) بعد تقسیم کن! ➗</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>تجزیه کامل روی \(\mathbb{Q}\)</h4>
+<div class="qbox"><b>سؤال:</b> \(f=x^3-2x^2-x+2\) را روی \(\mathbb{Q}\) کامل تجزیه کن.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>کاندیداهای ریشه گویا: \(\pm 1,\pm 2\). تست: \(f(1)=1-2-1+2=0\) ✔ → \((x-1)\) عامل است!</li>
+<li>تقسیم: \(f=(x-1)(x^2-x-2)=(x-1)(x-2)(x+1)\) ✅.</li>
+<li>ریشه‌ها: \(1,2,-1\) — هر سه گویا! پس روی \(\mathbb{Q}\) کاملاً می‌شکند 🎉.</li></ol></details></div>
+
+<h2 id="s2">۱۰-۲ حوزه‌های اقلیدسی 📏</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>حوزه اقلیدسی، PID، و زنجیره طلایی ⛓️</h4>
+<p><b>حوزه اقلیدسی:</b> حوزه صحیح با «تابع اندازه» \(d\) که تقسیم با باقی‌مانده کوچک‌تر ممکن باشد. مثال‌ها: \(\mathbb{Z}\) (اندازه: قدرمطلق)، \(F[x]\) (اندازه: درجه)، \(\mathbb{Z}[i]\) (گاوسی‌ها، اندازه: نرم)!<br>
+⭐ <b>زنجیره طلایی (حفظ کن!):</b> حوزه اقلیدسی ⟹ <b>PID</b> (هر ایده‌آل اصلی) ⟹ <b>UFD</b> (تجزیه یکتا)!<br>
+⚠️ هیچ‌کدام از عکس‌ها درست نیست! (مثال: \(\mathbb{Z}[x]\) نه PID است نه... — ولی UFD هست! و حلقه اعداد صحیح آیزنشتاین PIDِ غیراقلیدسی است!)</p></div>
+<div class="box proof"><span class="tag">ایده اثبات</span><h4>چرا اقلیدسی ⟹ PID؟</h4>
+<ol class="steps"><li>ایده‌آل ناصفر \(I\) بردار؛ عضو ناصفر \(b\) با کمترین اندازه را انتخاب کن.</li>
+<li>ادعا \(I=(b)\): برای هر \(a\in I\) تقسیم کن: \(a=bq+r\). چون \(r=a-bq\in I\) و اندازه‌اش کوچک‌تر است، پس \(r=0\)!</li>
+<li>پس \(a\in(b)\) ✔. ∎ (دقیقاً همان اثبات «زیرگروه‌های \(\mathbb{Z}\)» در فصل ۲! 👯)</li></ol></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>ب.م.م در \(\mathbb{Q}[x]\)</h4>
+<div class="qbox"><b>سؤال:</b> ب.م.م \(f=x^2-1\) و \(g=x^2+2x+1\) در \(\mathbb{Q}[x]\)؟ (با الگوریتم اقلیدسی!)</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(g=(x+1)^2\) و \(f=(x-1)(x+1)\). تقسیم \(g\) بر \(f\)؟ بهتر: \(g-f=2x+2=2(x+1)\).</li>
+<li>حالا \(f\) بر \((x+1)\): \(f=(x+1)(x-1)\) بخش‌پذیر است، باقی‌مانده ۰ ✔.</li>
+<li>پس ب.م.م \(=x+1\) ✅ (تا ضرب در ثابت ناصفر!).</li></ol></details></div>
+
+<h2 id="s3">۱۰-۳ میدان کسرها ➗</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>ساختن \(\mathbb{Q}\) از \(\mathbb{Z}\) (تعمیم‌یافته!)</h4>
+<p>از هر حوزه صحیح \(D\) می‌توان «کسرها» \(\frac{a}{b}\) (\(b\neq 0\)) ساخت با قانون \(\frac{a}{b}=\frac{c}{d}\iff ad=bc\) — این می‌شود <b>میدان کسرها</b> \(\mathrm{Frac}(D)\). مثال‌ها: \(\mathrm{Frac}(\mathbb{Z})=\mathbb{Q}\)، \(\mathrm{Frac}(F[x])=F(x)\) (توابع گویا)!<br>
+⭐ خاصیت جهانی: هر همریختی یک‌به‌یک از \(D\) به یک میدان، از روی \(\mathrm{Frac}(D)\) رد می‌شود!</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>کسرهای گاوسی</h4>
+<div class="qbox"><b>سؤال:</b> میدان کسرهای \(\mathbb{Z}[i]\) (اعداد صحیح گاوسی) چیست؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>کسر \(\frac{a+bi}{c+di}\) با مخرج ناصفر. با ضرب در مزدوج مخرج: \(=\frac{(a+bi)(c-di)}{c^2+d^2}\) — صورت و مخرج صحیح!</li>
+<li>پس هر کسر = عدد مختلط با قسمت‌های گویا → میدان کسرها \(= \mathbb{Q}(i)=\{a+bi:a,b\in\mathbb{Q}\}\) ✅.</li></ol></details></div>
+
+<h2 id="s4">۱۰-۴ حوزه تجزیه یکتا (UFD) 🧬</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐</span><h4>تحویل‌ناپذیر در برابر اول + UFD</h4>
+<p><b>تحویل‌ناپذیر:</b> ناواحدِ ناصفری که فقط تجزیه بدیهی دارد (مثل عدد اول، ولی...)؛ <b>اول:</b> \(p\mid ab\Rightarrow p\mid a\) یا \(p\mid b\).<br>
+همیشه: اول ⟹ تحویل‌ناپذیر ✔. ولی ⚠️ عکسش فقط در UFD درست است!<br>
+<b>UFD:</b> هر ناصفرِ ناواحد به‌صورت حاصل‌ضرب تحویل‌ناپذیرها نوشته می‌شود (وجود) و این تجزیه یکتاست (یکتایی تا ترتیب و یکاها).<br>
+⭐ قضیه: هر PID یک UFD است! (پس \(\mathbb{Z}\)، \(F[x]\)، \(\mathbb{Z}[i]\) همه UFD‌اند 🎉.)</p></div>
+<div class="box warn"><span class="tag">⚠️ مثال نقض معروف</span><h4>\(\mathbb{Z}[\sqrt{-5}]\) یک UFD نیست!</h4>
+<p>\(6=2\times 3=(1+\sqrt{-5})(1-\sqrt{-5})\) — دو تجزیه متفاوت به تحویل‌ناپذیرها! 🤯 (چک کن: هر ۴ عامل تحویل‌ناپذیرند — با نرم \(N(a+b\sqrt{-5})=a^2+5b^2\) ثابت می‌شود.) پس «تجزیه یکتا» یک نعمت است، نه یک حق! 🙏</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>اول یا تحویل‌ناپذیر؟</h4>
+<div class="qbox"><b>سؤال:</b> در \(\mathbb{Z}[x]\)، آیا \(x\) اول است؟ آیا \(2\) تحویل‌ناپذیر است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(x\) اول است ✔: اگر \(x\mid fg\) آنگاه جمله ثابت \(fg\) صفر است... (یا: \(\mathbb{Z}[x]/(x)\cong\mathbb{Z}\) حوزه صحیح است پس \((x)\) اول است! 🎯 فصل ۹!).</li>
+<li>۲ تحویل‌ناپذیر است ✔ (اگر \(2=fg\) آنگاه درجه‌ها صفر و... فقط تجزیه بدیهی). و چون \(\mathbb{Z}[x]\) هم UFD است (گاوس!)، ۲ اول هم هست ✔.</li></ol></details></div>
+
+<h2 id="s5">۱۰-۵ آزمون‌های تحویل‌ناپذیری 🔬 (جعبه‌ابزار!)</h2>
+<div class="box thm"><span class="tag">جعبه‌ابزار ⭐⭐⭐</span><h4>۵ سلاح برای تحویل‌ناپذیری روی \(\mathbb{Q}\)</h4>
+<ol><li><b>تست ریشه گویا:</b> اگر درجه \(\le 3\) و ریشه گویا ندارد → تحویل‌ناپذیر! (چرا؟ تجزیه حتماً یک عامل درجه ۱ می‌دهد!) ⚠️ برای درجه \(\ge 4\) کافی نیست (\( (x^2+1)^2 \) ریشه ندارد ولی تحویل‌پذیر است! 🪤)</li>
+<li><b>آیزنشتاین 👑:</b> اگر اولی \(p\) باشد که: \(p\nmid\) ضریب پیشرو، \(p\mid\) بقیه ضرایب، \(p^2\nmid\) جمله ثابت → تحویل‌ناپذیر روی \(\mathbb{Q}\)!</li>
+<li><b>کاهش به پیمانه \(p\):</b> اگر \(\bar f\) در \(\mathbb{Z}_p[x]\) تحویل‌ناپذیر باشد (و درجه کم نشود) → \(f\) روی \(\mathbb{Q}\) تحویل‌ناپذیر!</li>
+<li><b>لم گاوس:</b> تحویل‌ناپذیری روی \(\mathbb{Q}\) ⟺ روی \(\mathbb{Z}\) (برای چندجمله‌ای اولیه).</li>
+<li><b>درجه ۲ و ۳:</b> تحویل‌پذیر ⟺ ریشه دارد (در همان میدان!).</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>آیزنشتاین در عمل</h4>
+<p>کتاب با \(p=2\) نشان می‌دهد \(x^4+2x+2\) تحویل‌ناپذیر است (۲ پیشرو را عاد نمی‌کند، بقیه را می‌کند، \(4\nmid 2\) ✔). و چندجمله‌ای دایره‌بُر \(\Phi_p=x^{p-1}+\cdots+1\) با ترفند \(x\mapsto x+1\) + آیزنشتاین تحویل‌ناپذیر است! ✨</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>سه شکار! 🏹</h4>
+<div class="qbox"><b>سؤال:</b> تحویل‌ناپذیری روی \(\mathbb{Q}\): (الف) \(x^3-2\) (ب) \(x^4+4x^3+6x^2+4x+2\) (ج) \(x^4+1\).</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) درجه ۳ بدون ریشه گویا (\(\sqrt[3]{2}\) گنگ!) → تحویل‌ناپذیر ✅.</li>
+<li>(ب) آیزنشتاین با \(p=2\): \(2\nmid 1\) (پیشرو)، \(2\mid 4,6,4\)، \(4\nmid 2\) ✔ → تحویل‌ناپذیر ✅👑.</li>
+<li>(ج) ⚠️ تله! ریشه (حقیقی) ندارد ولی \(x^4+1=(x^2+\sqrt2x+1)(x^2-\sqrt2x+1)\)... روی \(\mathbb{Q}\)؟ امتحان: \((x^2+ax+b)(x^2-ax+c)\)... می‌شود \((x^2+1)^2-(x)^2\)؟ جواب: \(x^4+1=(x^2+2x+1)\)... نه! واقعیت: تحویل‌پذیر است؟ \(x^4+4\) سوفی‌ژرمن است ولی \(x^4+1\)؟ با \(x\mapsto\) ... پاسخ: \(x^4+1\) روی \(\mathbb{Q}\) تحویل‌ناپذیر است! (به پیمانه ۳؟ \(\bar f\) در \(\mathbb{Z}_3\) ریشه ندارد ولی ممکن است دو درجه۲... چک کامل لازم است. در واقع \(x^4+1=\Phi_8\) و دایره‌برها تحویل‌ناپذیرند! ✅) — درس: برای درجه ۴ «بی‌ریشگی» کافی نیست، باید همه تجزیه‌های \(2+2\) را هم رد کنی! 🪤</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>زنجیره طلایی</td><td>اقلیدسی ⟹ PID ⟹ UFD (عکس‌ها غلط!)</td></tr>
+<tr><td>\(F[x]\)</td><td>اقلیدسی با درجه؛ تقسیم + حداکثر n ریشه</td></tr>
+<tr><td>میدان کسرها</td><td>\(\mathrm{Frac}(\mathbb{Z})=\mathbb{Q}\)، \(\mathrm{Frac}(F[x])=F(x)\)</td></tr>
+<tr><td>آیزنشتاین</td><td>\(p\nmid\) پیشرو، \(p\mid\) بقیه، \(p^2\nmid\) ثابت ⟹ تحویل‌ناپذیر 👑</td></tr>
+<tr><td>UFD نیست!</td><td>\(\mathbb{Z}[\sqrt{-5}]\): دو تجزیه برای ۶ 🤯</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>«بدون ریشه» فقط برای درجه ۲ و ۳ ⟹ تحویل‌ناپذیر! 🪤</li>
+<li>در آیزنشتاین هر سه شرط لازم است (مخصوصاً \(p^2\nmid\) جمله ثابت!).</li>
+<li>در کاهش پیمانه‌ای، درجه نباید کم شود (ضریب پیشرو به پیمانه p صفر نشود!).</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> با آیزنشتاین: \(x^5-6x+3\) روی \(\mathbb{Q}\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(p=3\): \(3\nmid 1\)، \(3\mid -6, 3\)... ضرایب میانی صفر‌اند و \(3\mid 0\) ✔، \(9\nmid 3\) ✔ → تحویل‌ناپذیر ✅.</p></details>
+<div class="qbox"><b>۲.</b> آیا \(x^2+1\) روی \(\mathbb{Z}_3\) تحویل‌ناپذیر است؟ روی \(\mathbb{Z}_5\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>در \(\mathbb{Z}_3\): مقادیر \(0^2+1=1\)، \(1+1=2\)، \(4+1=5\equiv 2\) — هیچ صفر نیست → تحویل‌ناپذیر ✔. در \(\mathbb{Z}_5\): \(2^2+1=5\equiv 0\) → ریشه دارد → تحویل‌پذیر ❌ (\(=(x-2)(x+2)\)).</p></details>
+<div class="qbox"><b>۳.</b> زنجیره «اقلیدسی ⟹ PID ⟹ UFD» را با یک مثال برای هر حلقه کامل کن.</div>
+<details class="ans"><summary>پاسخ</summary><p>اقلیدسی: \(\mathbb{Z}\)؛ PID: هر اقلیدسی (مثل \(F[x]\))؛ UFD: \(\mathbb{Z}[x]\) (گاوس!) که PID نیست ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch9.html">→ فصل ۹</a><button class="btn btn-ghost done-btn" data-ch="10">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch11.html">فصل ۱۱: پیشرفته حلقه ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۱۰</div><div><a href="ch11.html">بعدی: پیشرفته‌تر در حلقه‌ها ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

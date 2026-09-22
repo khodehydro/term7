@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۶: نرمال و همریختی | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۶ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch5.html">→ فصل ۵</a><a href="ch6.html" class="active">فصل ۶</a><a href="ch7.html">فصل ۷ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۶: زیرگروه نرمال و همریختی ⚖️</h1><p>مهم‌ترین فصل نظریه گروه‌ها! این‌جا «تقسیم» گروه‌ها را یاد می‌گیری: \(G/N\) — گروه خارج‌قسمتی! ➗</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۶-۱ زیرگروه نرمال</a><a href="#s2">۶-۲ همریختی‌ها</a><a href="#s3">۶-۳ قضایای یکریختی</a><a href="#s4">۶-۴ ساده بودن \(A_n\)</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>نرمال یعنی «منصف»! 🤝</h4><p>یادت هست در فصل ۴ دیدیم هم‌دسته چپ و راست گاهی فرق دارند؟ زیرگروه <b>نرمال</b> آن است که «فرقی بین چپ و راستش نیست»: \(gH=Hg\) برای همه \(g\)! چرا مهم؟ چون فقط با زیرگروه نرمال می‌توان روی هم‌دسته‌ها «ضرب» تعریف کرد و یک گروه جدید (\(G/N\)) ساخت! مثل این‌که فقط با برش‌های مساوی می‌شود کیک را منصفانه تقسیم کرد! 🍰</p></div>
+
+<h2 id="s1">۶-۱ زیرگروه‌های نرمال</h2>
+<div class="box def"><span class="tag">تعریف ⭐⭐⭐</span><h4>زیرگروه نرمال \(N\triangleleft G\)</h4>
+<p>سه تعریف معادل (هر کدام را دوست داری استفاده کن!):</p><ol>
+<li>\(gN=Ng\) برای هر \(g\in G\) (چپ = راست).</li>
+<li>\(gNg^{-1}=N\) برای هر \(g\) (تحت مزدوج‌گیری بسته است).</li>
+<li>\(gNg^{-1}\subseteq N\) برای هر \(g\) (نسخه تک‌طرفه — برای اثبات راحت‌تر است!).</li></ol>
+<p>اگر \(N\triangleleft G\)، مجموعه هم‌دسته‌ها با عمل \((aN)(bN)=(ab)N\) یک گروه می‌شود: <b>گروه خارج‌قسمتی \(G/N\)</b> با \(|G/N|=[G:N]\). 🎂</p></div>
+<div class="box tip"><span class="tag">میان‌بر ⚡</span><h4>تست‌های سریع نرمال بودن</h4><ul>
+<li>هر زیرگروهِ گروه <b>آبلی</b> نرمال است ✔ (چون \(gH=Hg\) خودکار!).</li>
+<li>زیرگروه با <b>اندیس ۲</b> همیشه نرمال است! ✔ (چرا؟ فقط دو هم‌دسته هست: \(H\) و «بقیه» — پس چپ و راست مجبورند برابر باشند!)</li>
+<li>مرکز \(Z(G)\) و هسته هر همریختی همیشه نرمال‌اند ✔.</li>
+<li>⚠️ ولی زیرگروه دلخواهِ گروه غیرآبلی لزوماً نرمال نیست!</li></ul></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>\(A_n\triangleleft S_n\) ولی ...</h4>
+<ul><li>\(A_n\) اندیس ۲ در \(S_n\) دارد پس نرمال است ✔ و \(S_n/A_n\cong\mathbb{Z}_2\)!</li>
+<li>در \(S_3\)، زیرگروه \(H=\{e,(1\,2)\}\) نرمال <b>نیست</b> ❌: \((1\,3)H\neq H(1\,3)\) (همان محاسبه فصل ۴!). ولی زیرگروه \(\{e,(1\,2\,3),(1\,3\,2)\}\) اندیس ۲ دارد پس نرمال است ✔.</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>ساختن جدول \(G/N\)</h4>
+<div class="qbox"><b>سؤال:</b> جدول گروه خارج‌قسمتی \(\mathbb{Z}_6/\langle 3\rangle\) را بنویس. این گروه با چه گروهی یکریخت است؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(N=\langle 3\rangle=\{0,3\}\). هم‌دسته‌ها: \(N=\{0,3\}\)، \(1+N=\{1,4\}\)، \(2+N=\{2,5\}\). پس \(|G/N|=3\).</li>
+<li>جمع: \((1+N)+(1+N)=2+N\)، \((1+N)+(1+N)+(1+N)=3+N=N\) (چون \(3\in N\)!). پس \(1+N\) مرتبه ۳ دارد.</li>
+<li>گروه ۳عضوی دوری است → \(\mathbb{Z}_6/\langle 3\rangle\cong\mathbb{Z}_3\) ✅🎉.</li></ol></details></div>
+
+<h2 id="s2">۶-۲ همریختی‌ها 📨</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>همریختی، هسته، تصویر</h4>
+<p>تابع \(\varphi:G\to H\) با \(\varphi(ab)=\varphi(a)\varphi(b)\) = <b>همریختی</b> (یکریختی همان همریختی دوسویی است!).<br>
+<b>هسته:</b> \(\ker\varphi=\{g:\varphi(g)=e\}\) — «کسانی که به همانی می‌روند».<br>
+<b>تصویر:</b> \(\mathrm{im}\,\varphi=\{\varphi(g):g\in G\}\) — «مقصدهای واقعی».<br>
+⭐ \(\ker\varphi\triangleleft G\) همیشه! و \(\varphi\) یک‌به‌یک است ⟺ \(\ker\varphi=\{e\}\).</p></div>
+<div class="box tip"><span class="tag">👶 شهود هسته</span><p>همریختی مثل یک «دوربین سیاه‌سفید» 📷 است که عکس رنگی (\(G\)) را سیاه‌سفید (\(H\)) می‌کند. <b>هسته</b> = همه رنگ‌هایی که «سفید» دیده می‌شوند! هرچه هسته بزرگ‌تر، اطلاعات بیشتری گم می‌شود. اگر هسته فقط \(\{e\}\) باشد، هیچ‌چیز گم نشده (یک‌به‌یک!).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>هسته و تصویر در عمل</h4>
+<div class="qbox"><b>سؤال:</b> \(\varphi:\mathbb{Z}_{12}\to\mathbb{Z}_4\) با \(\varphi(x)=x\pmod 4\) (باقی‌مانده بر ۴). همریختی است؟ هسته و تصویر؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>همریختی؟ \(\varphi(a+b)=(a+b)\bmod 4=(a\bmod 4+b\bmod 4)\bmod 4=\varphi(a)+\varphi(b)\) ✔.</li>
+<li>هسته: \(x\bmod 4=0\) یعنی \(x\in\{0,4,8\}\) → \(\ker\varphi=\{0,4,8\}=\langle 4\rangle\)، ۳ عضو ✔.</li>
+<li>تصویر: مقادیر \(0,1,2,3\) همه می‌آیند (مثلاً \(\varphi(2)=2\)) → پوشا، تصویر = کل \(\mathbb{Z}_4\) ✔.</li>
+<li>تست: \(|G|/|\ker|=12/3=4=|\mathrm{im}|\) ✔ (پیش‌نمایش قضیه اول یکریختی! 👀).</li></ol></details></div>
+
+<h2 id="s3">۶-۳ قضایای یکریختی 👑👑👑</h2>
+<div class="box thm"><span class="tag">قضیه اول یکریختی 👑</span><h4>\(G/\ker\varphi\cong\mathrm{im}\,\varphi\)</h4>
+<p>برای هر همریختی \(\varphi:G\to H\): خارج‌قسمت بر هسته، با تصویر یکریخت است! به‌ویژه اگر \(\varphi\) پوشا باشد: \(G/\ker\varphi\cong H\).<br>
+<b>به زبان بچه‌گانه:</b> «عکس سیاه‌سفید = دنیای رنگی تقسیم بر رنگ‌های گم‌شده!» 📷➗</p></div>
+<div class="box thm"><span class="tag">قضایای دوم و سوم</span><h4>الماس 💎 و تلسکوپ 🔭</h4>
+<ul><li><b>دوم (الماس):</b> اگر \(H\le G\) و \(N\triangleleft G\) آنگاه \(HN\le G\) و \(HN/N\cong H/(H\cap N)\).</li>
+<li><b>سوم (تلسکوپ/حذف):</b> اگر \(N\subseteq M\) هر دو نرمال در \(G\) آنگاه \((G/N)/(M/N)\cong G/M\). (مثل ساده کردن کسر: \(N\)‌ها حذف می‌شوند! ➗)</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>جادوی قضیه اول 🪄</h4>
+<div class="qbox"><b>سؤال:</b> با قضیه اول ثابت کن \(\mathbb{Z}_{12}/\langle 4\rangle\cong\mathbb{Z}_4\) و \((\mathbb{Z}/12\mathbb{Z})/(4\mathbb{Z}/12\mathbb{Z})\cong\mathbb{Z}_4\).</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>همان \(\varphi(x)=x\bmod 4\) مثال قبل: پوشا با هسته \(\langle 4\rangle\). قضیه اول: \(\mathbb{Z}_{12}/\langle 4\rangle\cong\mathbb{Z}_4\) ✅.</li>
+<li>دومی: قضیه سوم با \(G=\mathbb{Z}\)، \(N=12\mathbb{Z}\)، \(M=4\mathbb{Z}\): چون \(12\mathbb{Z}\subseteq 4\mathbb{Z}\)، داریم \((\mathbb{Z}/12\mathbb{Z})/(4\mathbb{Z}/12\mathbb{Z})\cong\mathbb{Z}/4\mathbb{Z}\cong\mathbb{Z}_4\) ✅. تلسکوپ! 🔭</li></ol></details></div>
+
+<h2 id="s4">۶-۴ ساده بودن \(A_n\) برای \(n\ge 5\) 💎</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>گروه ساده</h4>
+<p>گروه نابدیهی که هیچ زیرگروه نرمال سره (غیر از \(\{e\}\) و خودش) ندارد = <b>ساده</b>. (مثل اعداد اول در دنیای گروه‌ها! 🔢)</p></div>
+<div class="box thm"><span class="tag">قضیه ⭐⭐⭐</span><h4>\(A_n\) برای \(n\ge 5\) ساده است!</h4>
+<p>کتاب ثابت می‌کند \(A_n\) (\(n\ge 5\)) هیچ زیرگروه نرمال سره ندارد. ایده اثبات (خلاصه):<br>
+۱) هر زیرگروه نرمال نابدیهی \(N\) یک ۳-دور دارد (با مزدوج‌گیری و جابه‌جاگری هوشمندانه).<br>
+۲) همه ۳-دورها در \(A_n\) مزدوج‌اند، پس \(N\) همه ۳-دورها را دارد.<br>
+۳) ۳-دورها \(A_n\) را تولید می‌کنند، پس \(N=A_n\). ∎<br>
+⚠️ دقت: \(A_4\) ساده <b>نیست</b>! (کلاین \(V_4\) در آن نرمال است.) و \(A_3\cong\mathbb{Z}_3\) ساده است (مرتبه اول!).</p></div>
+<div class="box tip"><span class="tag">💡 چرا مهم؟</span><p>این قضیه، کلید اثبات «حل‌ناپذیری معادله درجه ۵ با فرمول رادیکالی» (نظریه گالوا، جبر ۲) است! 🔑 تاریخ‌ساز!</p></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>نرمال</td><td>\(gN=Ng\) ⟺ \(gNg^{-1}=N\)</td></tr>
+<tr><td>تست سریع</td><td>آبلی ⟹ همه نرمال؛ اندیس ۲ ⟹ نرمال</td></tr>
+<tr><td>قضیه اول</td><td>\(G/\ker\varphi\cong\mathrm{im}\,\varphi\)</td></tr>
+<tr><td>یک‌به‌یک؟</td><td>⟺ \(\ker=\{e\}\)</td></tr>
+<tr><td>\(A_n\) ساده؟</td><td>\(n\ge 5\) بله؛ \(A_4\) خیر!</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>برای \(G/N\) حتماً باید \(N\) نرمال باشد! 🪤</li>
+<li>قضیه اول را «برعکس» هم بلد باش: هر گروه خارج‌قسمتی، تصویر یک همریختی (طبیعی) است.</li>
+<li>در \(S_n\)، \(A_n\) تنها زیرگروه اندیس ۲ است.</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> آیا \(H=\{e,(1\,2\,3),(1\,3\,2)\}\) در \(S_3\) نرمال است؟ خارج‌قسمت؟</div>
+<details class="ans"><summary>پاسخ</summary><p>بله ✔ (اندیس \(6/3=2\)). \(S_3/H\) مرتبه ۲ → \(\cong\mathbb{Z}_2\) ✔.</p></details>
+<div class="qbox"><b>۲.</b> هسته \(\det:GL_2(\mathbb{R})\to\mathbb{R}^*\)؟ و \(GL_2/\ker\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>هسته = ماتریس‌های دترمینان ۱ (\(SL_2\)) ✔. قضیه اول: \(GL_2/SL_2\cong\mathbb{R}^*\) (چون دترمینان پوشاست) ✔.</p></details>
+<div class="qbox"><b>۳.</b> چرا \(A_4\) ساده نیست؟</div>
+<details class="ans"><summary>پاسخ</summary><p>کلاین \(V=\{e,(12)(34),(13)(24),(14)(23)\}\) زیرگروه نرمال سره آن است ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch5.html">→ فصل ۵</a><button class="btn btn-ghost done-btn" data-ch="6">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch7.html">فصل ۷: آبلی متناهی‌مولد ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۶</div><div><a href="ch7.html">بعدی: آبلی متناهی‌مولد ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فصل ۵: یکریختی | آکادمی جبر ۱</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},chtml:{scale:1.08}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container">
+<div class="logo">∑</div><div><div class="brand-name">آکادمی جبر ۱</div><div class="brand-sub">فصل ۵ از ۱۲</div></div>
+<nav class="nav-links"><a href="index.html">خانه</a><a href="ch4.html">→ فصل ۴</a><a href="ch5.html" class="active">فصل ۵</a><a href="ch6.html">فصل ۶ ←</a></nav>
+</div></header>
+<section class="ch-hero"><div class="container"><h1>فصل ۵: یکریختی 👯</h1><p>کی گفته \(\mathbb{Z}_4\) با کلاین فرق دارد؟! یکریختی یعنی «ساختار یکسان با اسم‌های متفاوت» — مثل ترجمه یک کتاب به دو زبان! 📖📖</p></div></section>
+<div class="container ch-layout">
+<aside class="toc"><h4>📑 بخش‌ها</h4>
+<a href="#s1">۵-۱ یکریختی</a><a href="#s2">۵-۲ قضیه کیلی</a><a href="#s3">۵-۳ خودریختی‌ها</a><a href="#s4">۵-۴ حاصل‌ضرب مستقیم</a><a href="#sum">خلاصه + امتحان</a><a href="#quiz">خودآزمایی</a></aside>
+<main class="chapter-body">
+<div class="box tip"><span class="tag">👶 شهود</span><h4>یکریختی مثل «ترجمه» است! 🌐</h4><p>دو کتابِ «شازده کوچولو» به فارسی و فرانسه: کلمات فرق دارند ولی <b>داستان یکی است</b>! یکریختی \(\varphi:G\to H\) یک «دیکشنری دوسویه» است که جمع/ضرب را هم حفظ می‌کند: \(\varphi(ab)=\varphi(a)\varphi(b)\). اگر چنین دیکشنری‌ای باشد می‌گوییم \(G\cong H\) (یکریخت‌اند) — یعنی از نظر جبری «همان»‌اند! 👯</p></div>
+
+<h2 id="s1">۵-۱ یکریختی</h2>
+<div class="box def"><span class="tag">تعریف ⭐</span><h4>یکریختی</h4>
+<p>تابع دوسویی (یک‌به‌یک و پوشا) \(\varphi:G\to H\) که \(\varphi(ab)=\varphi(a)\varphi(b)\) را <b>یکریختی</b> می‌نامیم و می‌نویسیم \(G\cong H\).</p></div>
+<div class="box thm"><span class="tag">قضیه ⭐⭐</span><h4>یکریختی چه چیزهایی را حفظ می‌کند؟ (چک‌لیست!)</h4>
+<p>اگر \(\varphi:G\to H\) یکریختی باشد:</p><ol>
+<li>\(\varphi(e_G)=e_H\) و \(\varphi(a^{-1})=\varphi(a)^{-1}\) و \(\varphi(a^n)=\varphi(a)^n\).</li>
+<li>\(o(a)=o(\varphi(a))\) — <b>مرتبه حفظ می‌شود!</b> (قوی‌ترین تست!) 💪</li>
+<li>\(G\) آبلی ⟺ \(H\) آبلی؛ \(G\) دوری ⟺ \(H\) دوری.</li>
+<li>تعداد اعضای هر مرتبه، مرکز، و ساختار زیرگروه‌ها حفظ می‌شود.</li></ol>
+<p>⚠️ <b>استراتژی اثبات «یکریخت نیستند»:</b> یک خاصیت ساختاری پیدا کن که در یکی هست و در دیگری نیست! (مثلاً: یکی دوری و دیگری نه؛ تعداد اعضای مرتبه ۲ فرق دارد؛ یکی آبلی و دیگری نه...)</p></div>
+<div class="box book-ex"><span class="tag">مثال‌های کتاب 📖</span><h4>یکریخت‌های معروف کتاب</h4>
+<ul><li>\((\mathbb{R}^+,\cdot)\cong(\mathbb{R},+)\) با \(\varphi(x)=\ln x\): چون \(\ln(ab)=\ln a+\ln b\)! 🎯 (لگاریتم، ضرب را به جمع ترجمه می‌کند!)</li>
+<li>\(U_n\cong\mathbb{Z}_n\) (ریشه‌های واحد با جمع پیمانه‌ای!).</li>
+<li>⭐ \(\mathbb{Z}_4\not\cong V_4\) (کلاین): چون \(\mathbb{Z}_4\) عضو مرتبه ۴ دارد ولی کلاین ندارد (همه ناهمانی‌ها مرتبه ۲)! — همین یک خط کافی است! ✅</li></ul></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>یکریخت یا نه؟ (مسابقه! 🏁)</h4>
+<div class="qbox"><b>سؤال:</b> (الف) آیا \((\mathbb{Z},+)\cong(\mathbb{Q},+)\)؟ (ب) آیا \(\mathbb{Z}_6\cong S_3\)؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) <b>خیر</b> ❌. تست مرتبه؟ هر دو نامتناهی‌اند... تست بهتر: در \(\mathbb{Q}\) معادله \(2x=a\) همیشه جواب دارد (نصف‌پذیر!) ولی در \(\mathbb{Z}\) معادله \(2x=1\) جواب ندارد! خاصیت ساختاری متفاوت → یکریخت نیستند. 🎯 (راه دیگر: \(\mathbb{Z}\) دوری ولی \(\mathbb{Q}\) دوری نیست!)</li>
+<li>(ب) <b>خیر</b> ❌ (خیلی راحت!): \(\mathbb{Z}_6\) آبلی ولی \(S_3\) غیرآبلی است! ✅ یک خط و تمام.</li></ol></details></div>
+
+<h2 id="s2">۵-۲ قضیه کیلی 🏛️</h2>
+<div class="box thm"><span class="tag">قضیه کیلی ⭐⭐⭐</span><h4>هر گروه، زیرگروهی از یک گروه متقارن است!</h4>
+<p>هر گروه \(G\) با زیرگروهی از \(S_G\) (جایگشت‌های مجموعه \(G\)) یکریخت است. به‌ویژه اگر \(|G|=n\) آنگاه \(G\) با زیرگروهی از \(S_n\) یکریخت است.<br>
+<b>ایده:</b> هر \(g\) را به «ضرب از چپ» \(T_g(x)=gx\) نظیر کن — این یک جایگشت از \(G\) است! (چرا جایگشت؟ چون معادله \(gx=y\) جواب یکتا دارد ✔).</p></div>
+<div class="box tip"><span class="tag">💡 چرا مهم؟</span><p>کیلی می‌گوید \(S_n\)‌ها «مادر» همه گروه‌های متناهی‌اند! 🤱 هر گروه متناهی را می‌توان به‌صورت گروهی از جایگشت‌ها دید. (فصل ۸ این ایده را به «عمل گروه» تعمیم می‌دهد.)</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>کیلی در عمل</h4>
+<div class="qbox"><b>سؤال:</b> گروه \(\mathbb{Z}_3=\{0,1,2\}\) را به‌صورت زیرگروهی از \(S_3\) بنویس (با قضیه کیلی).</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>\(T_0\): جمع با ۰ → همانی \(e\).</li>
+<li>\(T_1\): \(0\mapsto 1\mapsto 2\mapsto 0\) → دور \((0\,1\,2)\) ⭕.</li>
+<li>\(T_2\): \(0\mapsto 2\mapsto 1\mapsto 0\) → دور \((0\,2\,1)\).</li>
+<li>پس \(\mathbb{Z}_3\cong\{e,(0\,1\,2),(0\,2\,1)\}\le S_3\) ✅ — یک زیرگروه دوری مرتبه ۳ از \(S_3\)!</li></ol></details></div>
+
+<h2 id="s3">۵-۳ خودریختی‌ها 🪞</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>خودریختی و \(\mathrm{Aut}(G)\)</h4>
+<p>یکریختی از \(G\) به <b>خودش</b> را خودریختی می‌نامیم. مجموعه‌شان با ترکیب، گروه می‌شود: \(\mathrm{Aut}(G)\).<br>
+⭐ \(\mathrm{Aut}(\mathbb{Z}_n)\cong U(n)\) (یکاهای پیمانه n): خودریختی با فرستادن \(1\mapsto k\) مشخص می‌شود که \((k,n)=1\)؛ پس \(|\mathrm{Aut}(\mathbb{Z}_n)|=\varphi(n)\).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>خودریختی‌های \(\mathbb{Z}_8\)</h4>
+<div class="qbox"><b>سؤال:</b> همه خودریختی‌های \(\mathbb{Z}_8\) را بنویس.</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>خودریختی \(\varphi\) با \(\varphi(1)=k\) مشخص می‌شود که \(k\) مولد باشد: \((k,8)=1\) → \(k\in\{1,3,5,7\}\).</li>
+<li>پس ۴ خودریختی: \(\varphi_k(x)=kx\): \(\varphi_1=id\)، \(\varphi_3(x)=3x\)، \(\varphi_5\)، \(\varphi_7\). تعداد \(=\varphi(8)=4\) ✔.</li>
+<li>چک نمونه: \(\varphi_3(2+6)=\varphi_3(0)=0\) و \(\varphi_3(2)+\varphi_3(6)=6+18\equiv 6+2=8\equiv 0\) ✔.</li></ol></details></div>
+
+<h2 id="s4">۵-۴ حاصل‌ضرب‌های مستقیم 🧱</h2>
+<div class="box def"><span class="tag">تعریف</span><h4>حاصل‌ضرب مستقیم</h4>
+<p>\(G\times H=\{(g,h)\}\) با عمل مؤلفه‌ای: \((g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2)\). مرتبه \((g,h)\) = ک.م.م مرتبه‌ها! 📏<br>
+⭐ <b>قضیه:</b> \(\mathbb{Z}_m\times\mathbb{Z}_n\) دوری است ⟺ \((m,n)=1\) (و آنگاه \(\cong\mathbb{Z}_{mn}\)).</p></div>
+<div class="box proof"><span class="tag">ایده اثبات</span><h4>چرا \((m,n)=1\) لازم است؟</h4>
+<ol class="steps"><li>مرتبه \((1,1)\) برابر \(\mathrm{lcm}(m,n)=\frac{mn}{(m,n)}\).</li>
+<li>دوری بودن یعنی عضوی مرتبه \(mn\) داشته باشیم؛ بیشترین مرتبه ممکن همین ک.م.م است.</li>
+<li>پس دوری ⟺ \(\frac{mn}{(m,n)}=mn\) ⟺ \((m,n)=1\) ✔. ∎</li></ol></div>
+<div class="box book-ex"><span class="tag">مثال کتاب 📖</span><h4>\(\mathbb{Z}_2\times\mathbb{Z}_2\) همان کلاین است!</h4>
+<p>\((2,2)=2\neq 1\) پس دوری نیست؛ هر ۳ عضو ناهمانی مرتبه ۲ دارند → \(\mathbb{Z}_2\times\mathbb{Z}_2\cong V_4\)! 🎯 ولی \(\mathbb{Z}_2\times\mathbb{Z}_3\cong\mathbb{Z}_6\) چون \((2,3)=1\).</p></div>
+<div class="box my-ex"><span class="tag">مثال من ✍️</span><h4>دوری یا نه؟ + مرتبه زوج‌مرتب</h4>
+<div class="qbox"><b>سؤال:</b> (الف) آیا \(\mathbb{Z}_4\times\mathbb{Z}_6\) دوری است؟ (ب) مرتبه \((2,3)\) در آن؟</div>
+<details class="ans"><summary>👁️ حل قدم‌به‌قدم</summary><ol class="steps">
+<li>(الف) \((4,6)=2\neq 1\) → <b>دوری نیست</b> ❌.</li>
+<li>(ب) \(o(2)\) در \(\mathbb{Z}_4\) = \(\frac{4}{2}=2\)؛ \(o(3)\) در \(\mathbb{Z}_6\) = \(\frac{6}{3}=2\). پس \(o(2,3)=\mathrm{lcm}(2,2)=2\) ✅. (چک: \(2\cdot(2,3)=(4,6)=(0,0)\) ✔.)</li></ol></details></div>
+
+<h2 id="sum">📝 خلاصه + نکات امتحانی</h2>
+<table class="tbl"><tr><th>مفهوم</th><th>خلاصه</th></tr>
+<tr><td>یکریختی</td><td>دوسویی + حفظ عمل؛ مرتبه/آبلی/دوری حفظ می‌شود</td></tr>
+<tr><td>کیلی</td><td>هر گروه مرتبه n ≤ زیرگروهی از \(S_n\)</td></tr>
+<tr><td>\(\mathrm{Aut}(\mathbb{Z}_n)\)</td><td>\(\cong U(n)\)، مرتبه \(\varphi(n)\)</td></tr>
+<tr><td>\(\mathbb{Z}_m\times\mathbb{Z}_n\) دوری</td><td>⟺ \((m,n)=1\)</td></tr>
+<tr><td>مرتبه در حاصل‌ضرب</td><td>ک.م.م مرتبه مؤلفه‌ها</td></tr></table>
+<div class="box exam"><span class="tag">🎯 تله‌ها</span><ul>
+<li>برای «یکریخت نیستند» فقط <b>یک</b> خاصیت متفاوت کافی است (مرتبه اعضا قوی‌ترین است).</li>
+<li>دقت: \(\mathbb{Z}_{mn}\cong\mathbb{Z}_m\times\mathbb{Z}_n\) فقط وقتی \((m,n)=1\)! 🪤</li>
+<li>خودریختی \(\mathbb{Z}_n\) با تصویرِ ۱ مشخص می‌شود (چون ۱ مولد است).</li></ul></div>
+<h2 id="quiz">✅ خودآزمایی</h2>
+<div class="box my-ex"><span class="tag">خودآزمایی</span>
+<div class="qbox"><b>۱.</b> آیا \(\mathbb{Z}_8\cong\mathbb{Z}_2\times\mathbb{Z}_4\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>خیر ❌! \(\mathbb{Z}_8\) دوری ولی \((2,4)=2\) پس دومی دوری نیست. (یا: اولی عضو مرتبه ۸ دارد، دومی ندارد.)</p></details>
+<div class="qbox"><b>۲.</b> \(|\mathrm{Aut}(\mathbb{Z}_{12})|\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(\varphi(12)=4\) ✔.</p></details>
+<div class="qbox"><b>۳.</b> مرتبه \((4,6)\) در \(\mathbb{Z}_8\times\mathbb{Z}_{10}\)؟</div>
+<details class="ans"><summary>پاسخ</summary><p>\(o(4)=\frac{8}{4}=2\)، \(o(6)=\frac{10}{2}=5\) → \(\mathrm{lcm}(2,5)=10\) ✔.</p></details></div>
+<div class="pager"><a class="btn btn-ghost" href="ch4.html">→ فصل ۴</a><button class="btn btn-ghost done-btn" data-ch="5">✔ این فصل را خواندم</button><a class="btn btn-brand" href="ch6.html">فصل ۶: نرمال و همریختی ←</a></div>
+</main></div>
+<footer><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><div>📚 آکادمی جبر ۱ — فصل ۵</div><div><a href="ch6.html">بعدی: نرمال و همریختی ←</a></div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
