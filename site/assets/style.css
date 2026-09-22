@@ -1,18 +1,26 @@
-/* ===== آکادمی جبر ۱ — استایل اصلی ===== */
+/* ===== آکادمی جبر ۱ — استایل ===== */
 :root{
-  --bg:#f6f7fb; --card:#ffffff; --ink:#1c2333; --muted:#5b6478;
-  --brand:#5b3df5; --brand2:#9d4edd; --accent:#ff6b6b; --gold:#f4a259;
-  --green:#0ca678; --blue:#1971c2; --purple:#7c3aed; --orange:#e8590c; --teal:#0e9aa7;
-  --line:#e6e9f2; --radius:18px;
-  --shadow:0 10px 30px rgba(28,35,51,.08);
+  --bg:#eef1f8; --card:#ffffff; --ink:#1a2033; --muted:#5a647c;
+  --brand:#4f3bd9; --brand2:#8b3fd9; --accent:#e85d6a; --gold:#f4a259;
+  --green:#0b9b72; --blue:#1b6fd4; --purple:#6d3ee0; --orange:#e25a12; --teal:#0d8f9c;
+  --line:#e3e7f2; --radius:20px;
+  --shadow:0 12px 40px rgba(26,32,51,.08);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:2.1;font-size:16.5px}
+body{
+  margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:2.05;font-size:16.5px;direction:rtl;unicode-bidi:isolate;
+}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1060px;margin:0 auto;padding:0 20px}
-/* هدر */
+p,li,td,th,h1,h2,h3,h4,summary{unicode-bidi:isolate;text-align:start}
+p,li{text-align:justify}
+.en,.ltr,bdi.ltr,code{direction:ltr;unicode-bidi:isolate;display:inline}
+.en{display:block;color:var(--muted);font-size:12.5px}
+mjx-container{direction:ltr!important;unicode-bidi:isolate!important;display:inline-block!important;vertical-align:middle;margin:0 .1em}
+mjx-container[display="true"]{display:block!important;text-align:center!important;overflow-x:auto}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topbar .container{display:flex;align-items:center;gap:14px;padding:12px 20px}
 .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;box-shadow:var(--shadow)}
@@ -22,9 +30,8 @@ a:hover{text-decoration:underline}
 .nav-links a{padding:7px 14px;border-radius:999px;background:#eef0f7;color:var(--ink);font-size:14px;font-weight:700}
 .nav-links a:hover{background:var(--brand);color:#fff;text-decoration:none}
 .nav-links a.active{background:var(--brand);color:#fff}
-/* هیرو */
-.hero{background:linear-gradient(135deg,#2b2d7a 0%,#5b3df5 45%,#9d4edd 75%,#ff6b6b 130%);color:#fff;border-radius:0 0 34px 34px;padding:60px 0 70px;position:relative;overflow:hidden}
-.hero::before{content:"∑ ∫ π √ ∞ φ λ ∀ ∃ ∈";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(18vw,170px);font-weight:900;opacity:.07;letter-spacing:20px;pointer-events:none;white-space:nowrap}
+.hero{background:linear-gradient(135deg,#1e1f5c 0%,#4f3bd9 45%,#8b3fd9 75%,#e85d6a 130%);color:#fff;border-radius:0 0 34px 34px;padding:60px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"∑ ∫ π √ ∞ φ λ ∀ ∃ ∈";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(18vw,170px);font-weight:900;opacity:.07;letter-spacing:20px;pointer-events:none;white-space:nowrap;direction:ltr}
 .hero h1{font-size:clamp(30px,5vw,52px);margin:0 0 10px;font-weight:900}
 .hero p{font-size:clamp(15px,2.4vw,19px);opacity:.93;max-width:760px}
 .hero .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
@@ -33,7 +40,6 @@ a:hover{text-decoration:underline}
 .btn-light{background:#fff;color:var(--brand)}
 .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;box-shadow:var(--shadow)}
 .btn-ghost{background:#eef0f7;color:var(--ink)}
-/* کارت فصل‌ها */
 .section-title{font-size:26px;font-weight:900;margin:44px 0 6px}
 .section-sub{color:var(--muted);margin:0 0 22px}
 .ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
@@ -44,7 +50,6 @@ a:hover{text-decoration:underline}
 .ch-card .en{font-size:12.5px;color:var(--muted);position:relative}
 .ch-card ul{margin:12px 0;font-size:14px;color:var(--muted);padding-right:18px;position:relative}
 .ch-card .go{display:inline-block;margin-top:8px;font-weight:800}
-/* جعبه‌های آموزشی */
 .box{border-radius:var(--radius);padding:20px 22px;margin:22px 0;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
 .box h4{margin:0 0 10px;font-size:18px}
 .box.def{border-right:6px solid var(--blue);background:linear-gradient(to left,#e7f1fd, #fff 60%)}
@@ -66,12 +71,10 @@ a:hover{text-decoration:underline}
 .ans{background:#f0faf6;border-radius:12px;padding:12px 18px;margin:10px 0;border:1px solid #bfe6d4}
 details.ans{cursor:pointer}
 details.ans summary{font-weight:800;color:var(--green);cursor:pointer}
-/* جدول */
 table.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 table.tbl th{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:12px}
 table.tbl td,table.tbl th{border:1px solid var(--line);padding:10px 12px;text-align:center}
 table.tbl tr:nth-child(even) td{background:#fafbff}
-/* صفحه فصل */
 .ch-hero{background:linear-gradient(135deg,#2b2d7a,#5b3df5 60%,#9d4edd);color:#fff;padding:44px 0;border-radius:0 0 30px 30px}
 .ch-hero h1{margin:0;font-size:clamp(26px,4.5vw,40px)}
 .ch-hero p{opacity:.9;margin:8px 0 0}
@@ -90,6 +93,5 @@ table.tbl tr:nth-child(even) td{background:#fafbff}
 footer{background:#171a2e;color:#c9cdea;padding:36px 0;margin-top:50px;border-radius:34px 34px 0 0}
 footer a{color:#fff}
 .math{overflow-x:auto;overflow-y:hidden}
-mjx-container{font-size:110%!important}
 @media(max-width:860px){.ch-layout{grid-template-columns:1fr}.toc{position:static;max-height:none}}
 @media print{.topbar,.toc,.pager,footer,.no-print{display:none}.ch-layout{grid-template-columns:1fr}}
